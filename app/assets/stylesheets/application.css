@@ -1,15 +1,111 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+body{
+    margin: 0;
+}
+
+h1 a{
+    margin: 0;
+    font-family: "Seymour One", sans-serif;
+      font-size: 30px;
+      color: #F9CB40;
+      line-height: 50px;
+}
+
+header{
+    align-items: center;
+    background: #2a7eb1;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.4);
+    display: flex;
+    height: 80px;
+    padding-left: 20px;
+        
+}
+
+
+header .inner {
+    margin: 0;
+    max-width: 100%;
+    width: 2000px;
+}
+
+header .flexbox {
+    align-items: center;
+    display: flex;
+    justify-content: space-between; 
+ 
+}
+
+.logo-img img {
+    vertical-align: bottom;
+}
+
+.nav-global ul {
+    list-style :none;
+}
+
+.nav-global li {
+    margin: 0 15px;
+}
+
+
+
+.nav-global a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.section {
+    height: 80vh;
+    
+    background-color: #383634;
+    background: url('c7d0b216253729f0dad7ca403c6ab494_m.jpg');
+    background-size: cover;
+    
+}
+
+.pickup {
+     height: 100vh;
+     background-color: #ffffff;
+}
+
+.comming {
+    height: 100vh;
+    background-color: #ffffff;
+}
+
+#form1{
+  height: 300px;
+  position: relative;
+}
+
+#sbox{
+ height:50px;
+  width: 400px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+border-radius:2px 0 0 2px;/*検索ボックスの角を丸める*/		
+background:#eee;/*検索ボックスの背景カラー*/		
+}
+
+#sbtn{
+height:55px;
+  width: 60px;
+  margin: auto;
+  position: absolute;
+  top: 123px;
+  left: 460px;
+  right: 0;
+    border-radius:0 2px 2px 0;/*検索ボタンの角を丸める*/ 
+    background:#7fbfff;/*検索ボタンの背景カラー*/ 
+    border:none;/*検索ボタンの枠線を消す*/ 
+    color:#fff;/*検索ボタンのテキストカラー*/ 
+    font-weight:bold;/*検索ボタンのテキスト太字*/ 
+    font-size:16px;/*検索ボタンのフォントサイズ*/ 
+}
+
+#sbtn:hover{
+color:#666;/*検索ボタンマウスオーバー時のフォントカラー*/ 
+}
