@@ -1,0 +1,2 @@
+class Grooping < ApplicationRecord
+end
