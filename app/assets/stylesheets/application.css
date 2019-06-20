@@ -86,8 +86,8 @@ header .flexbox {
   left: 0;
   right: 0;
   bottom: 0;
-border-radius:2px 0 0 2px;/*検索ボックスの角を丸める*/		
-background:#eee;/*検索ボックスの背景カラー*/		
+border-radius:2px 0 0 2px;
+background:#eee;
 }
 
 #sbtn{

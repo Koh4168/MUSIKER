@@ -1,3 +1,59 @@
 // Place all the styles related to the top controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.section {
+    height: 80vh;
+    
+    background-color: #383634;
+    background: url('c7d0b216253729f0dad7ca403c6ab494_m.jpg');
+    background-size: cover;
+    
+}
+
+.pickup {
+     height: 100vh;
+     background-color: #ffffff;
+}
+
+.comming {
+    height: 100vh;
+    background-color: #ffffff;
+}
+
+#form1{
+  height: 300px;
+  position: relative;
+}
+
+#sbox{
+ height:50px;
+  width: 400px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+border-radius:2px 0 0 2px;
+background:#eee;
+}
+
+#sbtn{
+height:55px;
+  width: 60px;
+  margin: auto;
+  position: absolute;
+  top: 123px;
+  left: 460px;
+  right: 0;
+    border-radius:0 2px 2px 0;/*検索ボタンの角を丸める*/ 
+    background:#7fbfff;/*検索ボタンの背景カラー*/ 
+    border:none;/*検索ボタンの枠線を消す*/ 
+    color:#fff;/*検索ボタンのテキストカラー*/ 
+    font-weight:bold;/*検索ボタンのテキスト太字*/ 
+    font-size:16px;/*検索ボタンのフォントサイズ*/ 
+}
+
+#sbtn:hover{
+color:#666;/*検索ボタンマウスオーバー時のフォントカラー*/ 
+}
