@@ -70,3 +70,4 @@ gem 'jquery-rails'
 gem "font-awesome-rails"
 gem 'hirb'
 gem 'hirb-unicode'
+gem 'compass-rails', '3.1.0'
