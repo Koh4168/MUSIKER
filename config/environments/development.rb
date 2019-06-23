@@ -30,9 +30,7 @@ Rails.application.configure do
   # Store uploaded files on the local file system (see config/storage.yml for options)
   config.active_storage.service = :local
 
-  # Don't care if the mailer can't send.
-  config.action_mailer.raise_delivery_errors = false
-
+ 
   config.action_mailer.perform_caching = false
 
   # Print deprecation notices to the Rails logger.
@@ -61,4 +59,19 @@ Rails.application.configure do
   config.web_console.whitelisted_ips ='126.33.140.4'
   
   config.action_mailer.default_url_options = {protocol: "https",host: "https://e5f4290b9b1f4589af242e8d6c5dca04.vfs.cloud9.ap-northeast-1.amazonaws.com"}
+ # Don't care if the mailer can't send.
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    :enable_starttls_auto => true,
+    :address => "smtp.gmail.com",
+    :port =>587,
+    :domain =>"smtp.gmail.com",
+    :user_name =>"kounosuke41680716@gmail.com",
+    :password => "jkzxvdawxjulhhiq",
+    :authentication => "login"
+  }
+
+
+
 end
