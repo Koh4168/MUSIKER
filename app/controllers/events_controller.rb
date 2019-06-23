@@ -12,6 +12,6 @@ class EventsController < ApplicationController
     
     private
     def event_params
-        params.permit(:image,:name,:place,:price,:text,:scedule)
+        params.permit(:image,:name,:place,:price,:text,:scedule,:link)
     end
 end
