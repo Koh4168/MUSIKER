@@ -1,5 +1,6 @@
 class EventsController < ApplicationController
     before_action :move_to_index, except: :index
+     
      def index
         @events = Event.order("created_at DESC ").page(params[:page]).per(10)
      end
@@ -16,5 +17,9 @@ class EventsController < ApplicationController
     private
     def event_params
         params.permit(:image,:name,:place,:price,:text,:scedule,:link)
+    end
+    
+    def move_to_index
+        redirect_to action: :index unless user_signed_in?
     end
 end
