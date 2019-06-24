@@ -16,9 +16,7 @@ class EventsController < ApplicationController
     
     def destroy
         event = Event.find(params[:id])
-        if event.user_id == current_user.id
-         event.destroy 
-        end
+        event.destroy if event.user_id == current_user.id
     end
     
     private
