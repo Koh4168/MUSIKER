@@ -1,6 +1,8 @@
-
-
-
+<div class="contents row">
     <% @events.each do |event| %>
      <p><%= event.text %></p>
-     <% end %>
+    <% end %>
+    
+    <%= paginate(@events) %>
+     
+</div>
