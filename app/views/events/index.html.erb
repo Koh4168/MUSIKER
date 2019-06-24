@@ -1,12 +1,23 @@
 <div class="contents row">
     <% @events.each do |event| %>
-     <p><%= event.name%></p>
-     <p><%= event.text%></p>
-     <p><%= event.image%></p>
-     <p><%= event.place%></p>
-     <p><%= event.price%></p>
-     <p><%= event.scedule%></p>
-     <span class="name">
+      <% if user_signed_in? && current_user.id ==event.user_id %>
+          <div class="more">
+              
+              <ul class="more_list">
+                  <li>
+                      <%= link_to '削除', "/events/#{event.id}",method: :delete %>
+                  </li>
+              </ul>
+          </div>
+      <% end %>
+      
+         <p><%= event.name%></p>
+         <p><%= event.text%></p>
+         <p><%= event.image%></p>
+         <p><%= event.place%></p>
+         <p><%= event.price%></p>
+         <p><%= event.scedule%></p>
+         <span class="name">
          <a href="">
              <span>投稿者</span><%= event.user.name %>
          </a>

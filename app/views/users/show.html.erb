@@ -1,14 +1,16 @@
 <div class="contents row">
     <p><%= @name%>さん</p>
     <% @events.each do |event| %>
-    
     <p><%= event.name%></p>
       <%= simple_format(event.text) %>
      <p><%= event.image%></p>
      <p><%= event.place%></p>
      <p><%= event.price%></p>
      <p><%= event.scedule%></p>
-    </div>
+    
+    <li>
+        <%= link_to '削除', "/events/#{event.id}",method: :delete %>
+    </li>
   <% end %>
   <%= paginate(@events) %>
  

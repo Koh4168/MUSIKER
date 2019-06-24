@@ -14,6 +14,13 @@ class EventsController < ApplicationController
                    link: event_params[:link],user_id: current_user.id )
     end
     
+    def destroy
+        event = Event.find(params[:id])
+        if event.user_id == current_user.id
+         event.destroy 
+        end
+    end
+    
     private
     def event_params
         params.permit(:image,:name,:place,:price,:text,:scedule,:link)
