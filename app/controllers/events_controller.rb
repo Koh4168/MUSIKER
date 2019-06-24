@@ -2,7 +2,7 @@ class EventsController < ApplicationController
     before_action :move_to_index, except: :index
      
      def index
-        @events = Event.order("created_at DESC ").page(params[:page]).per(10)
+        @events = Event.includes(:user).order("created_at DESC ").page(params[:page]).per(10)
      end
   
     def new
