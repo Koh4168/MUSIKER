@@ -1,7 +1,8 @@
 class EventsController < ApplicationController
+    before_action :move_to_index, except: :index
      def index
         @events = Event.order("created_at DESC ").page(params[:page]).per(10)
-      end
+     end
   
     def new
     end

@@ -16,7 +16,7 @@ h1 a{
     margin: 0;
     font-family: "Seymour One", sans-serif;
       font-size: 30px;
-      color: #F9CB40;
+      color: #000000;
       line-height: 50px;
 }
 
@@ -59,7 +59,7 @@ header .flexbox {
 
 
 .nav-global a {
-    color: #fff;
+    color:  #000000;
     text-decoration: none;
 }
 /*トプ画面のcss*/
@@ -111,7 +111,7 @@ height:55px;
     border-radius:0 2px 2px 0;/*角を丸める*/ 
     background:#7fbfff;/*背景カラー*/ 
     border:none;/*枠線を消す*/ 
-    color:#fff;
+    color: #000000;
     font-weight:bold;/*テキスト太字*/ 
     font-size:16px;/*フォントサイズ*/ 
 }
