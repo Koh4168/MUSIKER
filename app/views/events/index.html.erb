@@ -1,7 +1,13 @@
 <div class="contents row">
     <% @events.each do |event| %>
-     <p><%= event.text %></p>
+     <p><%= event.name%></p>
+     <p><%= event.text%></p>
+     <p><%= event.image%></p>
+     <p><%= event.place%></p>
+     <p><%= event.price%></p>
+     <p><%= event.scedule%></p>
     <% end %>
+    
     
     <%= paginate(@events) %>
      
