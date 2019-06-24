@@ -1,9 +1,15 @@
 <div class="contents row">
     <p><%= @name　%>さん</p>
     <% @events.each do |event| %>
-    <div class="content_post" style="background-image: url(<%= event.image %>);">
+    
+    <p><%= event.name%></p>
       <%= simple_format(event.text) %>
+     <p><%= event.image%></p>
+     <p><%= event.place%></p>
+     <p><%= event.price%></p>
+     <p><%= event.scedule%></p>
     </div>
   <% end %>
+  <%= paginate(@events) %>
  
 </div>
