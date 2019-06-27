@@ -3,10 +3,8 @@
     
    <div class="user_events">
         <% @events.each do |event| %>
-        <p><%= event.name%></p>
-          <%= simple_format(event.text) %>
-         <p><%= event.image%></p>
-         <p><%= event.place%></p>
+        <div class="content_post" style="background-image: url(<%= event.image %>);">
+        <p><%= event.name%></p> 
          <p><%= event.price%></p>
          <p><%= event.scedule%></p>
         <% end %>
