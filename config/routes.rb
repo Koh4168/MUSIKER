@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
      root to: "top#index"
      get "events"           => "events#index"
+     get "/users/events/new" => "events#new"
      get "events/new"       => "events#new"
      post "events"          => "events#create"
      delete "events/:id"    => "events#destroy"
