@@ -1,7 +1,6 @@
 class UsersController < ApplicationController
     def show
-        
-        @name=current_user.name
+        @user= User.find(params[:id])
         @events= current_user.events.page(params[:page]).per(5)
     end
 end
