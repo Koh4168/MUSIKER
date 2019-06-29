@@ -3,10 +3,13 @@
     
    <div class="user_events">
         <% @events.each do |event| %>
-        
-        <p><%= event.name%></p> 
-         <p><%= event.price%></p>
-         <p><%= event.scedule%></p>
+        <p>
+       <%=image_tag(@event.image_url) %>
+        <%= event.name%> 
+        <%= event.price%>
+        <%= event.scedule%>
+        </p>
+        </div>
         <% end %>
         <%= paginate(@events) %>
     </div>
