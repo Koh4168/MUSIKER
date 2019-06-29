@@ -3,16 +3,6 @@
           <li>
               <%= link_to '詳細',"/events/#{event.id}",method: :get %>
           </li>
-      
-      <% if user_signed_in? && current_user.id ==event.user_id %>
-         <li>
-             <%=link_to '編集', "/events/#{event.id}/edit", method: :get %>
-         </li>
-        <li>
-            <%= link_to '削除', "/events/#{event.id}",method: :delete %>
-        </li>
-      <% end %>
-      
          <p><%= event.name%></p>
          <p><%= event.text%></p>
          <p><%= event.image%></p>
