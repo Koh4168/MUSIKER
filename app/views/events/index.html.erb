@@ -1,17 +1,16 @@
 <div class="contents row">
     <% @events.each do |event| %>
+          <li>
+              <%= link_to '詳細',"/events/#{event.id}",method: :get %>
+          </li>
+      
       <% if user_signed_in? && current_user.id ==event.user_id %>
-          <div class="more">
-              
-              <ul class="more_list">
-                  <li>
-                      <%=link_to '編集', "/events/#{event.id}/edit", method: :get %>
-                  </li>
-                  <li>
-                      <%= link_to '削除', "/events/#{event.id}",method: :delete %>
-                  </li>
-              </ul>
-          </div>
+         <li>
+             <%=link_to '編集', "/events/#{event.id}/edit", method: :get %>
+         </li>
+        <li>
+            <%= link_to '削除', "/events/#{event.id}",method: :delete %>
+        </li>
       <% end %>
       
          <p><%= event.name%></p>
@@ -26,8 +25,6 @@
          </a>
      </span>
     <% end %>
-    
-    
     <%= paginate(@events) %>
      
 </div>
