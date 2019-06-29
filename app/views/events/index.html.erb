@@ -1,19 +1,6 @@
 <div class="contents row">
     <% @events.each do |event| %>
-          <li>
-              <%= link_to '詳細',"/events/#{event.id}",method: :get %>
-          </li>
-         <p><%= event.name%></p>
-         <p><%= event.text%></p>
-         <p><%= event.image%></p>
-         <p><%= event.place%></p>
-         <p><%= event.price%></p>
-         <p><%= event.scedule%></p>
-         <span class="name">
-         <a href="">
-             <span>投稿者</span><%= event.user.name %>
-         </a>
-     </span>
+       <%= render partial: "event", locals: {event: event}
     <% end %>
     <%= paginate(@events) %>
      
