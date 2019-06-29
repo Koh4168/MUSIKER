@@ -9,7 +9,10 @@ class EventsController < ApplicationController
     end
     
     def create
-        @event = current_user.event.build(event_param)
+        Event.create( name: event_params[:name], image: event_params[:image], place: event_params[:place],
+                  price: event_params[:price], text: event_params[:text], scedule: event_params[:scedule],
+                   link: event_params[:link],user_id: current_user.id )
+
     end 
     
     def destroy

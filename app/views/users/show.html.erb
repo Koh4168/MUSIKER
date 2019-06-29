@@ -1,18 +1,29 @@
 <div class="contents row">
+    <div class="user_info">
+        
+    </div>
     
     
    <div class="user_events">
         <% @events.each do |event| %>
-        <p>
-       <%=image_tag(@event.image_url) %>
-        <%= event.name%> 
-        <%= event.price%>
-        <%= event.scedule%>
-        </p>
-        </div>
+            <p>
+           
+            <%= event.name%> 
+            <%= event.price%>
+            <%= event.scedule%>
+            </p>
+            
+            <li>
+                <%=link_to '編集', "/events/#{event.id}/edit", method: :get %>
+            </li>
+            <li>
+                <%= link_to '削除', "/events/#{event.id}",method: :delete %>
+            </li>
         <% end %>
         <%= paginate(@events) %>
     </div>
+    
+
    
   
  

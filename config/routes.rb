@@ -10,5 +10,5 @@ Rails.application.routes.draw do
      patch "events/:id"     => "events#update"
      get "events/:id/edit"  => "events#edit"
      get  "users/:id"       => "users#show"
-     
-end
+     get "events/:id"       => "events#show"
+     end
