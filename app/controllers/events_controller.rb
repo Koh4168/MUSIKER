@@ -1,6 +1,6 @@
 class EventsController < ApplicationController
-    before_action :move_to_index, except: :index
-     
+    before_action :move_to_index, except: [:index, :show]
+    
      def index
         @events = Event.includes(:user).order("created_at DESC ").page(params[:page]).per(10)
      end
@@ -12,7 +12,6 @@ class EventsController < ApplicationController
         Event.create( name: event_params[:name], image: event_params[:image], place: event_params[:place],
                   price: event_params[:price], text: event_params[:text], scedule: event_params[:scedule],
                    link: event_params[:link],user_id: current_user.id )
-
     end 
     
     def destroy
@@ -29,6 +28,10 @@ class EventsController < ApplicationController
         if event.user_id == current_user.id
             event.update(event_params)
         end
+    end
+    
+    def show
+        @event = Event.find(params[:id])
     end
     
     private
