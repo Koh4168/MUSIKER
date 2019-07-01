@@ -3,7 +3,7 @@
             
             <h2><%= "#{@user.name}" %></h2>
             <h3><%= "#{@user.text}" %> </h3>
-            
+            <h3><%= "#{@user.link}" %></h3>
         
     </div>
     
@@ -15,14 +15,14 @@
             <%= event.price%>
             <%= event.scedule%>
             </p>
-          <% if user_signed_in?  %>
-            <li>
-                <%=link_to '編集', "/events/#{event.id}/edit", method: :get %>
-            </li>
-            <li>
-                <%= link_to '削除', "/events/#{event.id}",method: :delete %>
-            </li>
-           <% end %>
+              <% if user_signed_in?  %>
+                <li>
+                    <%=link_to '編集', "/events/#{event.id}/edit", method: :get %>
+                </li>
+                <li>
+                    <%= link_to '削除', "/events/#{event.id}",method: :delete %>
+                </li>
+              <% end %>
         <% end %>
         <%= paginate(@events) %>
     </div>
