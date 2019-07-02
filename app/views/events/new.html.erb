@@ -1,5 +1,5 @@
   <div class="contents row">
-  <%= form_for @event do |f| %>
+  <%= form_for (@event) do |f| %>
     <h2>
       イベント投稿
     </h2>
@@ -17,7 +17,7 @@
     <%= f.text_area :text, placeholder: '詳細',style: 'width: 50%; height: 100px'%><br><br>
     
     <%= f.label "イベントURL" %>
-    <%= f.text_field :name, placeholder: 'リンク先'%><br><br>
+    <%= f.text_field :link, placeholder: 'リンク先'%><br><br>
     
     <%= f.label "開催日" %>
     <%= f.date_field_tag :scedule %><br><br>

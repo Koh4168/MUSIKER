@@ -10,9 +10,8 @@ class EventsController < ApplicationController
     end
     
     def create
-        Event.create( name: event_params[:name], image: event_params[:image], place: event_params[:place],
-                  price: event_params[:price], text: event_params[:text], scedule: event_params[:scedule],
-                   link: event_params[:link],user_id: current_user.id )
+        Event.create(create_params)
+        
     end 
     
     def destroy
@@ -36,9 +35,11 @@ class EventsController < ApplicationController
     end
     
     private
-    def event_params
-        params.permit(:image,:name,:place,:price,:text,:scedule,:link)
+    def create_params
+        params.require(:event).permit(:image,:name,:place,:text,:scedule,:link).merge(user_id: current_user.id)
+       
     end
+    
     
     def move_to_index
         redirect_to action: :index unless user_signed_in?
