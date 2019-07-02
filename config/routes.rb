@@ -12,4 +12,5 @@ Rails.application.routes.draw do
      get "events/:id/edit"  => "events#edit"
      get  "users/:id"       => "users#show"
      get "events/:id"       => "events#show"
+     get 'users/:id/edit'   =>  "users#edit"
      end
