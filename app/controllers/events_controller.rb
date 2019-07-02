@@ -26,7 +26,7 @@ class EventsController < ApplicationController
     def update
         event = Event.find(params[:id])
         if event.user_id == current_user.id
-            event.update(event_params)
+            event.update(create_params)
         end
     end
     
