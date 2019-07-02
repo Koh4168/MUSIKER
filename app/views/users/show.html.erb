@@ -5,9 +5,7 @@
             <h3><%= "#{@user.text}" %> </h3>
             <h3><%= "#{@user.link}" %></h3>
     </div>
-    
-    
-   <div class="user_events">
+    <div class="user_events">
        <h2>イベント一覧</h2>
         <% @events.each do |event| %>
              <span><%= image_tag event.image.url %></span>
@@ -29,7 +27,7 @@
     </div>
      <% if user_signed_in?  %>
                 <li>
-                    <%=link_to 'mypage編集', "#", method: :get %>
+                    <%=link_to 'mypage編集',"/users/#{@user.id}/edit", method: :get %>
                 </li>
                 <li>
                     <%= link_to 'イベント投稿', "/events/new",method: :get%>
