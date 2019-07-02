@@ -20,7 +20,7 @@ class EventsController < ApplicationController
     end
     
     def edit
-        @event = Event.find(params[:id])
+        @event = find_event_by_id
     end
     
     def update
@@ -31,15 +31,17 @@ class EventsController < ApplicationController
     end
     
     def show
-        @event = Event.find(params[:id])
+        @event = find_event_by_id
     end
     
     private
     def create_params
         params.require(:event).permit(:image,:name,:place,:text,:scedule,:link).merge(user_id: current_user.id)
-       
     end
     
+    def find_event_by_id
+        Event.find(params[:id])
+    end
     
     def move_to_index
         redirect_to action: :index unless user_signed_in?
