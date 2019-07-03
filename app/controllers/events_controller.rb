@@ -7,11 +7,14 @@ class EventsController < ApplicationController
   
     def new
         @event=Event.new
+        
     end
     
     def create
-        Event.create(create_params)
-        
+        @event=Event.create(create_params)
+        unless @event.save
+        render action: :new
+        end
     end 
     
     def destroy
@@ -21,14 +24,19 @@ class EventsController < ApplicationController
     
     def edit
         @event = find_event_by_id
+        
     end
     
     def update
-        event = Event.find(params[:id])
-        if event.user_id == current_user.id
-            event.update(create_params)
+        @event = Event.find(params[:id])
+        if @event.user_id == current_user.id
+            @event.update(create_params)
+        end
+        unless @event.save
+        render action: :edit
         end
     end
+    
     
     def show
         @event = find_event_by_id
@@ -37,6 +45,7 @@ class EventsController < ApplicationController
     private
     def create_params
         params.require(:event).permit(:image,:name,:place,:text,:scedule,:link).merge(user_id: current_user.id)
+
     end
     
     def find_event_by_id
