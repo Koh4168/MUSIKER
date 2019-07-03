@@ -1,0 +1,10 @@
+ja:
+    activerecord:
+     attributes:
+        event:
+            name: イベント名
+           
+            place: 開催地
+            text: イベント詳細
+            link: イベントURL
+            sedule: 開催日時
