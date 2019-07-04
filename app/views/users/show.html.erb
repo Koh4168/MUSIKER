@@ -30,7 +30,11 @@
                     <%=link_to 'mypage編集',"/users/#{@user.id}/edit", method: :get %>
                 </li>
                 <li>
+                    <%=link_to 'メールアドレス　パスワード変更','/users/edit', method: :get %>
+                </li>
+                <li>
                     <%= link_to 'イベント投稿', "/events/new",method: :get%>
                 </li>
+                
               <% end %>
 </div>
