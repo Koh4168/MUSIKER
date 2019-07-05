@@ -15,9 +15,7 @@
             <h3><%= "#{@user.link}" %></h3>
     </div>
    
-    
-    
-    <% if user_signed_in? && current_user.id == @event.user_id %>
+   <% if user_signed_in? && current_user.id == @event.user_id %>
         <li>
             <%=link_to '編集', "/events/#{@event.id}/edit", method: :get %>
         </li>
