@@ -7,7 +7,6 @@ class EventsController < ApplicationController
   
     def new
         @event=Event.new
-        
     end
     
     def create
@@ -40,6 +39,8 @@ class EventsController < ApplicationController
     
     def show
         @event = find_event_by_id
+        @user = User.find_by(id: @event.user_id)  #event詳細ページにuser情報表示できるようにひもづけ
+       
     end
     
     private

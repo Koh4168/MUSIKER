@@ -1,16 +1,10 @@
 <div class="content_post" style="background-image: url(<%= event.image %>);">
-    <div class="more">
-        <li>
-            <%= link_to '詳細',"/events/#{event.id}",method: :get %>
-        </li>
          <p><%= event.name%></p>
-         <p><%= event.text%></p>
-         <p><%= event.image%></p>
          <p><%= event.place%></p>
          <p><%= event.scedule%></p>
      <span class="name">
-        <a href="">
-            <span>投稿者</span><%= event.user.name %>
-        </a>
-     </span>
-    </div>
+         <%= link_to "投稿者#{event.user.name}", user_path(event.user) %><br>
+         <%= link_to '詳細',"/events/#{event.id}" %>
+    </span>
+</div>
+

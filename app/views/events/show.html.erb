@@ -1,21 +1,28 @@
 <div class="contents row" >
-        <% if user_signed_in? && current_user.id == @event.user_id %>
-            <li>
-              <%=link_to '編集', "/events/#{@event.id}/edit", method: :get %>
-            </li>
-            <li>
-              <%= link_to '削除', "/events/#{@event.id}",method: :delete %>
-            </li>
-        <% end %>
-             <%= image_tag @event.image.url %>
-        <p>
-            <%= @event.name%> 
-            <%= @event.place%>
-            <%= @event.text %>
-            <%= @event.price%>
-            <%= @event.scedule%>
-            <%= @event.link %>
-        </p>
-            
-
+    <%= image_tag @event.image.url %>
+    <p>
+        <%= @event.name%><br><br>
+        <%= @event.place%><br><br>
+        <%= @event.text %><br><br>
+        <%= @event.price%><br><br>
+        <%= @event.scedule%><br><br>
+        <%= @event.link %><br><br>
+    </p>
+      <div class="user_info">　              <%#ユーザー情報表示 %>
+            <%= image_tag @user.image.url %>
+            <h2><%= "#{@user.name}" %></h2>
+            <h3><%= "#{@user.text}" %> </h3>
+            <h3><%= "#{@user.link}" %></h3>
+    </div>
+   
+    
+    
+    <% if user_signed_in? && current_user.id == @event.user_id %>
+        <li>
+            <%=link_to '編集', "/events/#{@event.id}/edit", method: :get %>
+        </li>
+        <li>
+            <%= link_to '削除', "/events/#{@event.id}",method: :delete %>
+        </li>
+    <% end %>
 </div>
