@@ -1,0 +1,2 @@
+class EventGrooping < ApplicationRecord
+end
