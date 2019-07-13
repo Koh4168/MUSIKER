@@ -18,9 +18,7 @@ class EventsController < ApplicationController
         else
             render action:new
         end
-        #unless @event.save
-        #render action: :new
-        #end
+        #unless @event.save　　　#render action: :new　　　#end
     end 
     
     def destroy
@@ -30,7 +28,7 @@ class EventsController < ApplicationController
     
     def edit
         @event = find_event_by_id
-        
+        @grooping_list = @event.groopings.pluck(:name).join(",")
     end
     
     def update
