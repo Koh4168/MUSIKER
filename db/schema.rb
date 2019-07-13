@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_12_101946) do
+ActiveRecord::Schema.define(version: 2019_07_13_084918) do
+
+  create_table "event_groopings", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "event_id"
+    t.integer "grooping_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["event_id", "grooping_id"], name: "index_event_groopings_on_event_id_and_grooping_id", unique: true
+    t.index ["event_id"], name: "index_event_groopings_on_event_id"
+    t.index ["grooping_id"], name: "index_event_groopings_on_grooping_id"
+  end
 
   create_table "events", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
