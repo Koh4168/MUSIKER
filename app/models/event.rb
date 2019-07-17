@@ -5,7 +5,14 @@ class Event < ApplicationRecord
     mount_uploader :image, ImageUploader
     validates :image,:name,:place,:text,:link,:scedule, presence: true
     
-    
+    def self.search(search)
+     if search
+      Event.where(['name LIKE?', "%#{search}"])
+     else
+      Event.all
+     end
+    end 
+   
     
     
     #以下、タグ機能実装過程
