@@ -56,12 +56,12 @@ header .flexbox {
     margin: 0 15px;
 }
 
-
-
 .nav-global a {
     color:  #000000;
     text-decoration: none;
 }
+
+
 /*トプ画面のcss*/
 .section {
     height: 100vh;
@@ -84,6 +84,10 @@ header .flexbox {
 #form1{
   height: 300px;
   position: relative;
+}
+
+#search{
+    width:200px;
 }
 
 #search1{

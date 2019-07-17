@@ -2,7 +2,7 @@
       <section class="section">
          <%= form_tag events_path, :method => 'get' do %>
             <p>
-              <%= text_field_tag :search1, params[:search] %>
+              <%= text_field_tag :search1, params[:search],{placeholder: "キーワード入力　(イベント名や、場所)"} %>
                <input id="sbtn" type="submit" value="検索" /></td>
                
             </p>

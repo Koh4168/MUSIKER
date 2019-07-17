@@ -21,7 +21,7 @@
           </h1>
           <%= form_tag events_path, :method => 'get' do %>
             <p>
-              <%= text_field_tag :search, params[:search] %>
+              <%= text_field_tag :search, params[:search],{placeholder: "キーワード入力　(イベント名や、場所)"} %>
               <%= submit_tag "Search", :name =>nil %>
             </p>
           <% end %>
