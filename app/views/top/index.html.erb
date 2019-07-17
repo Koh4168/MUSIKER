@@ -1,9 +1,17 @@
  <main role="main-search">
       <section class="section">
-       <form id="form1" action="https://e5f4290b9b1f4589af242e8d6c5dca04.vfs.cloud9.ap-northeast-1.amazonaws.com/?s=#">
+         <%= form_tag events_path, :method => 'get' do %>
+            <p>
+              <%= text_field_tag :search1, params[:search] %>
+               <input id="sbtn" type="submit" value="検索" /></td>
+               
+            </p>
+          <% end %>
+      <%#元々の検索フォーム
+      <form id="form1" action="https://e5f4290b9b1f4589af242e8d6c5dca04.vfs.cloud9.ap-northeast-1.amazonaws.com/?s=#">
         <input id="sbox"  id="s" name="s" type="text" placeholder="キーワードを入力" />
         <input id="sbtn" type="submit" value="検索" /></td>
-        </form>
+        </form>%>
       </section>
       
       <section class="pickup">

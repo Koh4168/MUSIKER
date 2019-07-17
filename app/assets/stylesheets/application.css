@@ -25,7 +25,7 @@ header{
     background: #2a7eb1;
     box-shadow: 2px 2px 10px rgba(0,0,0,0.4);
     display: flex;
-    height: 80px;
+    height: 90px;
     padding-left: 20px;
         
 }
@@ -64,9 +64,8 @@ header .flexbox {
 }
 /*トプ画面のcss*/
 .section {
-    height: 80vh;
-    
-    background-color: #383634;
+    height: 100vh;
+     background-color: #383634;
     background: url('c7d0b216253729f0dad7ca403c6ab494_m.jpg');
     background-size: cover;
     
@@ -87,7 +86,7 @@ header .flexbox {
   position: relative;
 }
 
-#sbox{
+#search1{
  height:50px;
   width: 400px;
   margin: auto;
@@ -101,12 +100,12 @@ background:#eee;
 }
 
 #sbtn{
-height:55px;
+height:57px;
   width: 60px;
   margin: auto;
   position: absolute;
-  top: 123px;
-  left: 460px;
+  top: 345px;
+  left: 467px;
   right: 0;
     border-radius:0 2px 2px 0;/*角を丸める*/ 
     background:#7fbfff;/*背景カラー*/ 
