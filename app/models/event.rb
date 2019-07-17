@@ -5,11 +5,15 @@ class Event < ApplicationRecord
     mount_uploader :image, ImageUploader
     validates :image,:name,:place,:text,:link,:scedule, presence: true
     
-    def save_groopings(tags)
+    
+    
+    
+    #以下、タグ機能実装過程
+    #def save_groopings(tags)
        # current_tags = self.groopings.pluck(:name) unless self.groopings.nil?
        #old_tags = current_tags - tags
         #new_tags = tags - current_tags
-    end 
+   # end 
     
      # Destroy old taggings:
     #old_tags.each do |old_name|
