@@ -1,6 +1,6 @@
-<div class="contents row">
+   <%= stylesheet_link_tag "users" %>
     <div class="user_info">
-            <%= image_tag @user.image.url %>
+            <span><%= image_tag @user.image.url %></span>
             <h2><%= "#{@user.name}" %></h2>
             <h3><%= "#{@user.text}" %> </h3>
             <h3><%= "#{@user.link}" %></h3>
@@ -12,7 +12,7 @@
             <p>
             <%= event.name%> 
             <%= event.price%>
-            <%= event.scedule%>
+            <%= event.scedule%>=
             </p>
               <% if user_signed_in?  %>
                 <li>

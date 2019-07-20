@@ -8,7 +8,6 @@ class Event < ApplicationRecord
     def self.search(search)
      if search
       Event.where(['name LIKE ? or place LIKE ?', "%#{search}%","%#{search}%"])
-     
      else
       Event.all
      end
