@@ -3,11 +3,20 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-body {
-   user_info {
+
+.user_info {
+img {
+    width: 300px;
+    float:left;
+}
+}
+
+.user_events{
     h2{
-    font-size: 200px;
-    color: #000000
-}
-}
+        clear:both;
+    }
+    img{
+        width: 300px;
+    
+    }
 }
