@@ -1,40 +1,38 @@
-   <%= stylesheet_link_tag "users" %>
-    <div class="user_info">
-            <span><%= image_tag @user.image.url %></span>
-            <h2><%= "#{@user.name}" %></h2>
-            <h3><%= "#{@user.text}" %> </h3>
-            <h3><%= "#{@user.link}" %></h3>
-    </div>
-    <div class="user_events">
-       <h2>イベント一覧</h2>
-        <% @events.each do |event| %>
-             <span><%= image_tag event.image.url %></span>
-            <p>
-            <%= event.name%> 
-            <%= event.price%>
-            <%= event.scedule%>=
-            </p>
-              <% if user_signed_in?  %>
-                <li>
-                    <%=link_to '編集', "/events/#{event.id}/edit", method: :get %>
-                </li>
-                <li>
-                    <%= link_to '削除', "/events/#{event.id}",method: :delete %>
-                </li>
-              <% end %>
-        <% end %>
-        <%= paginate(@events) %>
-    </div>
-     <% if user_signed_in?  %>
-                <li>
-                    <%=link_to 'mypage編集',"/users/#{@user.id}/edit", method: :get %>
-                </li>
-                <li>
-                    <%=link_to 'メールアドレス　パスワード変更','/users/edit', method: :get %>
-                </li>
-                <li>
-                    <%= link_to 'イベント投稿', "/events/new",method: :get%>
-                </li>
-                
-              <% end %>
+<%= stylesheet_link_tag "users" %>
+<div class="user_info">
+    <span><%= image_tag @user.image.url %></span>
+    <h2><%= "#{@user.name}" %></h2>
+    <h3><%= "#{@user.text}" %> </h3>
+    <h3><%= "#{@user.link}" %></h3>
 </div>
+<div class="user_events">
+    <h2>イベント一覧</h2>
+    <% @events.each do |event| %>
+        <span><%= image_tag event.image.url %></span>
+        <p>
+        <%= event.name%> 
+        <%= event.price%>
+        <%= event.scedule%>=
+        </p>
+        <% if user_signed_in?  %>
+            <li>
+                <%=link_to '編集', "/events/#{event.id}/edit", method: :get %>
+            </li>
+            <li>
+                <%= link_to '削除', "/events/#{event.id}",method: :delete %>
+            </li>
+        <% end %>
+    <% end %>
+    <%= paginate(@events) %>
+</div>
+     <% if user_signed_in?  %>
+        <li>
+            <%=link_to 'mypage編集',"/users/#{@user.id}/edit", method: :get %>
+        </li>
+        <li>
+            <%=link_to 'メールアドレス　パスワード変更','/users/edit', method: :get %>
+        </li>
+        <li>
+             <%= link_to 'イベント投稿', "/events/new",method: :get%>
+        </li>
+     <% end %>
