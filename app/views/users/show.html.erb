@@ -1,9 +1,11 @@
 <%= stylesheet_link_tag "users" %>
 <div class="user_info">
-    <span><%= image_tag @user.image.url %></span>
-    <h2><%= "#{@user.name}" %></h2>
-    <h3><%= "#{@user.text}" %> </h3>
-    <h3><%= "#{@user.link}" %></h3>
+    <ul class= "flexbox" >
+        <span><%= image_tag @user.image.url %></span>
+        <h2><%= "#{@user.name}" %></h2>
+        <h3><%= "#{@user.text}" %> </h3>
+        <h4><%= "#{@user.link}" %></h4>
+    </ul>
 </div>
 <div class="user_events">
     <h2>イベント一覧</h2>
