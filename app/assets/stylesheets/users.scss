@@ -31,11 +31,13 @@ h2 {
 .f-container-userstext{
     display: flex;
     flex-direction: row;
-
+   
     
     h3{
        margin: auto;
-    }
+       white-space: pre-wrap;
+       word-wrap: break-word;
+      }
 }
 }
 
