@@ -6,22 +6,25 @@
         <h2><%= "#{@user.name}" %></h2>
     </div> 
     <div class="f-container-userstext">
-        <i class="fas fa-portrait fa-3x"></i>
+        <%#<i class="fas fa-portrait fa-3x"></i>%>
         <h3><%= "#{@user.text}" %> </h3>
         <h4><%= "#{@user.link}" %></h4>
     </div>
 </div>
+
 <div class="user_events">
     <h2>イベント一覧</h2>
     <div class="f-container-eventindex">
         <% @events.each do |event| %>
           <div class="events">
             <span><%= image_tag event.image.url %></span>
-            <p>
-            <%= event.name%> 
+            <div class="name">
+                <%= event.name%> 
+            </div>
+            <div class="price-scedule">
             <%= event.price%>
-            <%= event.scedule%>=
-            </p>
+            <%= event.scedule%>
+            </div>
            <%#<% if user_signed_in?  
                 <li>
                     <%=link_to '編集', "/events/#{event.id}/edit", method: :get >
