@@ -1,33 +1,38 @@
 <%= stylesheet_link_tag "users" %>
 
 <div class="user_info">
-    <div class="portfolio">
+    <div class="f-container-portfolio">
         <span><%= image_tag @user.image.url %></span>
         <h2><%= "#{@user.name}" %></h2>
     </div> 
-    <div class="userstext">
+    <div class="f-container-userstext">
+        <i class="fas fa-portrait fa-3x"></i>
         <h3><%= "#{@user.text}" %> </h3>
         <h4><%= "#{@user.link}" %></h4>
     </div>
 </div>
 <div class="user_events">
     <h2>イベント一覧</h2>
-    <% @events.each do |event| %>
-        <span><%= image_tag event.image.url %></span>
-        <p>
-        <%= event.name%> 
-        <%= event.price%>
-        <%= event.scedule%>=
-        </p>
-        <% if user_signed_in?  %>
-            <li>
-                <%=link_to '編集', "/events/#{event.id}/edit", method: :get %>
-            </li>
-            <li>
-                <%= link_to '削除', "/events/#{event.id}",method: :delete %>
-            </li>
+    <div class="f-container-eventindex">
+        <% @events.each do |event| %>
+          <div class="events">
+            <span><%= image_tag event.image.url %></span>
+            <p>
+            <%= event.name%> 
+            <%= event.price%>
+            <%= event.scedule%>=
+            </p>
+           <%#<% if user_signed_in?  
+                <li>
+                    <%=link_to '編集', "/events/#{event.id}/edit", method: :get >
+                </li>
+                <li>
+                    <= link_to '削除', "/events/#{event.id}",method: :delete >
+                </li>
+            < end > %>
+            </div>
         <% end %>
-    <% end %>
+    </div>
     <%= paginate(@events) %>
 </div>
      <% if user_signed_in?  %>
