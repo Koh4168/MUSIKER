@@ -13,13 +13,13 @@ class EventsController < ApplicationController
     
     def create
         @event=Event.create(create_params)
-        grooping_list = params[:grooping_list].split(",")
-        if @event.save
-            @event.save_groopings(grooping_list)
-            redirect_to events_url
-        else
-            render action:new
-        end
+        #grooping_list = params[:grooping_list].split(",")
+       # if @event.save
+         #   @event.save_groopings(grooping_list)
+        #    redirect_to events_url
+       # else
+       #     render action:new
+       # end
         #unless @event.save　　　#render action: :new　　　#end
     end 
     
@@ -30,7 +30,7 @@ class EventsController < ApplicationController
     
     def edit
         @event = find_event_by_id
-        @grooping_list = @event.groopings.pluck(:name).join(",")
+       # @grooping_list = @event.groopings.pluck(:name).join(",")
     end
     
     def update

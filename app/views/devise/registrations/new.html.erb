@@ -1,65 +1,27 @@
 <div class="registrations">
    <div class="registrations-triangle"></div>
-<h2 class='registrations-header'>会員登録</h2>
+      <h2 class='registrations-header'>Member registration</h2>
 
-  <div class="ragistrations-container ">
-    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-      <%= render "devise/shared/error_messages", resource: resource %>
-     
-        <p><%= f.label "プロフィール画像をアップロード" %><br><%= f.file_field :image %></p>
-     <div class='input'>
-      <p><%= f.text_field :name,placeholder:'名前'%></p> 
-      <p><%= f.email_field :email, autofocus: true,placeholder:'メールアドレス'%></p> 
-    </div>
-      <div class="field">
-        <% if @validatable %>
-        <em>(<%= @minimum_password_length %>文字以上)</em>
-        <% end %>
-        <p><%= f.password_field :password, autocomplete: 'off',placeholder:'パスワード', class: 'input ' %></p> 
-        <p><%= f.password_field :password_confirmation, autocomplete:  'off',placeholder:"パスワード（確認）", class: 'input'%></p>
-      </div>
-      
-      <div class="actions">
-        <%= f.submit class: 'btn btn-primary withripple', value: '新規登録 ' %>
-      </div>
-    <% end %>
-  </div>
-
-
-
- <%= render "devise/shared/links" %>
-</div>
-</div>
-
-
-<div class="login">
-  <div class="login-triangle"></div>
-    <h2 class="login-header">LOG IN</h2>
- 
-  <div class="login-container">
-     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-      <% if alert %>
-        <p class='alert alert-danger'><%= alert %></p>
-      <% end %>
-     
-      <p><%= f.email_field :email, autofocus: true, placeholder: 'メールアドレス', class: 'input' %></p>
-      <p><%= f.password_field :password, autocomplete: 'off', placeholder: 'パスワード', class: 'input' %></p>
-      <p><%= f.submit class: 'btn btn-primary withripple', value: 'ログイン' %></p>
- 
-      <% if devise_mapping.rememberable? %>
-        <div class='checkbox'>
-          <label>
-            <input id='user_remember_me' name='user[remember_me]' type='checkbox' value='1'>
-            <%= f.label :remember_me, 'ログイン情報を記憶する', class: 'memory-check' %>
-          </label>
+      <div class="registrations-container ">
+        <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+        <%= render "devise/shared/error_messages", resource: resource %>
+            <p><%= f.label "プロフィール画像をアップロード" %><br><%= f.file_field :image %></p>
+         
+        <div class='input'>
+            <p><%= f.text_field :name,placeholder:'名前'%></p> 
+            <p><%= f.email_field :email, autofocus: true,placeholder:'メールアドレス'%></p> 
+          
+            <% if @validatable %>
+              <em>(<%= @minimum_password_length %>文字以上)</em>
+            <% end %>
+            <p><%= f.password_field :password, autocomplete: 'off',placeholder:'パスワード', class: 'input ' %></p> 
+            <p><%= f.password_field :password_confirmation, autocomplete:  'off',placeholder:"パスワード（確認）", class: 'input'%></p>
         </div>
+            <%= f.submit class: 'btn btn-primary withripple', value: '新規登録 ' %>
         <% end %>
-      <% end %>
-  </div>
-      
-      <div class='login_link'>
-        <%= render 'devise/shared/links' %>
       </div>
-    
-  
+    <%= render "devise/shared/links" %>
+  </div>
+</div>
+
 
