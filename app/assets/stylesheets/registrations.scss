@@ -26,21 +26,25 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
-.registrations {
-  width: 400px;
+.registrations,
+.users-edit{
+  width: 80%;
   margin: 16px auto;
   font-size: 16px;
 }
 
 /* Reset top and bottom margins from certain elements */
 .registrations-header,
-.registrations p {
+.users-edit-header,
+.registrations p,
+.users-edit p{
   margin-top: 0;
   margin-bottom: 0;
 }
 
 /* The triangle form is achieved by a CSS hack */
-.registrations-triangle {
+.registrations-triangle,
+.users-edit-triangle{
   width: 0;
   margin-right: auto;
   margin-left: auto;
@@ -48,7 +52,8 @@ body {
   border-bottom-color: #28d;
 }
 
-.registrations-header {
+.registrations-header,
+.users-edit-header{
   background: #28d;
   padding: 20px;
   font-size: 1.4em;
@@ -58,7 +63,8 @@ body {
   color: #fff;
 }
 
-.registrations-container {
+.registrations-container,
+.users-edit-container{
   background: #ebebeb;
   padding: 12px;
 
