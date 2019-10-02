@@ -25,14 +25,14 @@
             <%= event.price%>
             <%= event.scedule%>
             </div>
-           <% if user_signed_in?  %>
+           <%#<% if user_signed_in?  
                 <li>
-                    <%=link_to '編集', "/events/#{event.id}/edit", method: :get %>
+                    <%=link_to '編集', "/events/#{event.id}/edit", method: :get >
                 </li>
                 <li>
-                    <%= link_to '削除', "/events/#{event.id}",method: :delete %>
+                    <= link_to '削除', "/events/#{event.id}",method: :delete >
                 </li>
-            <% end %> 
+            < end > %>
             </div>
         <% end %>
     </div>

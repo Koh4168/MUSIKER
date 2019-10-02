@@ -31,7 +31,7 @@ body {
 }
 
 .events {
-  width: 400px;
+  width: 80%;
   margin: 16px auto;
   font-size: 16px;
 }
@@ -84,16 +84,22 @@ body {
   font-size: 0.95em;
 }
 
-.events input[type="email"],
-.events input[type="password"] {
+.events input[type="name"],
+.events input[type="place"],
+.events input[type="text"],
+{
   background: #fff;
   border-color: #bbb;
   color: #555;
 }
 
 /* Text fields' focus effect */
-.events input[type="email"]:focus,
-.events input[type="password"]:focus {
+.events input[type="name"]:focus,
+.events input[type="place"]:focus,
+.events input[type="text"]:focus,
+.events input[type="link"]:focus,
+.events input[type="scedule"]:focus,
+{
   border-color: #888;
 }
 

@@ -15,7 +15,6 @@
  
 img {
     border-radius: 50%;
-    //border-color: #2a7eb1;
     width: 140px;
     height: 140px;
     float:left;
@@ -37,8 +36,9 @@ h2 {
     h3{
        margin: auto;
        white-space: pre-wrap;
-       word-wrap: break-word;
-      }
+       
+       
+    }
 }
 }
 
@@ -46,9 +46,9 @@ h2 {
 .user_events{
 .f-container-eventindex{
         display: flex;
-        flex-direction: row;
-        //justify-content: space-between;
-        flex-wrap: wrap;
+       // flex-direction: row;
+        justify-content: space-arownd;
+    //flex-wrap:wrap;
 }
 .events{
     position: relative;
@@ -62,7 +62,7 @@ img{
     font-weight: bold;
     top: 70%;
     left: 50%;
-    transform: translate(-40%,-50%);
+    transform: translate(-20%,-50%);
     margin: 0;
     padding: 0;
     font-size: 12px;
