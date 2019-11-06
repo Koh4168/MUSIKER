@@ -1,10 +1,24 @@
-<div class="content_post" style="background-image: url(<%= event.image %>);">
-         <p><%= event.name%></p>
-         <p><%= event.place%></p>
-         <p><%= event.scedule%></p>
-     <span class="name">
+
+  <div class="events">
+         <span><%=image_tag event.image.url%></span>
+         <div class="event_name">
+                  <%= event.name%>
+         </div>
+         <div class="event_place">
+                  <%= event.place%>
+         </div>
+         <div class="event_scedule">
+                  <%= event.scedule%>
+         </div>
+  
+     
+     
+     <div class="user_name">
          <%= link_to "投稿者#{event.user.name}", user_path(event.user) %><br>
          <%= link_to '詳細',"/events/#{event.id}" %>
-    </span>
-</div>
+    </div>
+   </div>
+
+
+
 

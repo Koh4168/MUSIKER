@@ -1,0 +1,50 @@
+
+.events {
+  display: flex;
+  flex-wrap: wrap; 
+  position: relative; }
+  .events img {
+    width: 250px;
+    height: 200px; }
+  .events .event_name {
+    position: absolute;
+    color: black;
+    font-weight: bold;
+    top: 70%;
+    left: 50%;
+    transform: translate(-20%, -50%);
+    margin: 0;
+    padding: 0;
+    font-size: 12px; }
+  .events .event_place {
+    position: absolute;
+    color: black;
+    font-weight: bold;
+    top: 80%;
+    left: 50%;
+    transform: translate(-30%, -50%);
+    margin: 0%;
+    padding: 0%;
+    font-size: 12px; }
+  .events .event_scedule {
+    position: absolute;
+    color: black;
+    font-weight: bold;
+    top: 80%;
+    left: 50%;
+    transform: translate(-30%, -50%);
+    margin: 0%;
+    padding: 0%;
+    font-size: 12px; }
+  .events .user_name {
+    position: absolute;
+    color: black;
+    font-weight: bold;
+    top: 80%;
+    left: 50%;
+    transform: translate(-30%, -50%);
+    margin: 0%;
+    padding: 0%;
+    font-size: 12px; }
+
+/*# sourceMappingURL=events.css.map */
