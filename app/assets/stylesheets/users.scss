@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
+// userの情報 mypage,/
 
 .user_info {
  .f-container-portfolio{
@@ -36,47 +36,23 @@ h2 {
     h3{
        margin: auto;
        white-space: pre-wrap;
-       
-       
-    }
+     }
 }
 }
 
 
 .user_events{
 .f-container-eventindex{
-        display: flex;
-       // flex-direction: row;
-        justify-content: space-arownd;
-    //flex-wrap:wrap;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-arownd;
+    flex-wrap:wrap;
 }
 .events{
     position: relative;
-img{
+ img{
     width: 250px;
     height: 200px;
-}
-.name{
-    position: absolute;
-    color: white;
-    font-weight: bold;
-    top: 70%;
-    left: 50%;
-    transform: translate(-20%,-50%);
-    margin: 0;
-    padding: 0;
-    font-size: 12px;
-}
-.price-scedule{
-    position: absolute;
-    color: white;
-    font-weight: bold;
-    top: 80%;
-    left: 50%;
-    transform: translate(-30%,-50%);
-    margin: 0%;
-    padding: 0%;
-    font-size: 12px; 
 }
 }
 }

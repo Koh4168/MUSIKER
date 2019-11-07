@@ -1,19 +1,21 @@
-<div class="contents row" >
+<div class="events-show" >
     <%= image_tag @event.image.url %>
-    <p>
-        <%= @event.name%><br><br>
-        <%= @event.place%><br><br>
-        <%= @event.text %><br><br>
-        <%= @event.price%><br><br>
-        <%= @event.scedule%><br><br>
-        <%= @event.link %><br><br>
-    </p>
-      <div class="user_info">　              <%#ユーザー情報表示 %>
+    <div class="information">
+        <h1><%= @event.name%></h1>
+        <h2><%= @event.place%></h2>
+        <h2><%= @event.text %></h2>
+        <h2><%= @event.price%></h2>
+        <h2><%= @event.scedule%></h2>
+        <h3><%= @event.link %></h3>
+    </div>
+</div>
+
+<div class="user_info">　              <%#ユーザー情報表示 %>
             <%= image_tag @user.image.url %>
             <h2><%= "#{@user.name}" %></h2>
             <h3><%= "#{@user.text}" %> </h3>
             <h3><%= "#{@user.link}" %></h3>
-    </div>
+</div>
    
    <% if user_signed_in? && current_user.id == @event.user_id %>
         <li>
@@ -23,4 +25,3 @@
             <%= link_to '削除', "/events/#{@event.id}",method: :delete %>
         </li>
     <% end %>
-</div>

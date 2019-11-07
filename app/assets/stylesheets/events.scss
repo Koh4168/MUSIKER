@@ -3,9 +3,15 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-.events_index{
+.events-index{
     display: flex;
-    //flex-direction: row;
-    //justify-content: space-arownd;
-    //flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-arownd;
+    flex-wrap: wrap; 
+     
+  .events img {
+    width: 250px;
+    height: 200px; }
+
+   
 }
