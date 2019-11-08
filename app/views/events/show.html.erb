@@ -1,12 +1,12 @@
 <div class="events-show" >
     <%= image_tag @event.image.url %>
     <div class="information">
-        <h1><%= @event.name%></h1>
-        <h2><%= @event.place%></h2>
-        <h2><%= @event.text %></h2>
-        <h2><%= @event.price%></h2>
-        <h2><%= @event.scedule%></h2>
-        <h3><%= @event.link %></h3>
+        <p>イベント名</p><h1><%= @event.name%></h1>
+        <p>price</p><h3><%= @event.place%></h3>
+        <p>place</p><h3><%= @event.price%></h3>
+        <p>scedule</p><h3><%= @event.scedule%></h3>
+        <p>イベント詳細</p><h3><%= @event.text %></h3>
+        <p>イベントリンク</p><h3><%= @event.link %></h3>
     </div>
 </div>
 

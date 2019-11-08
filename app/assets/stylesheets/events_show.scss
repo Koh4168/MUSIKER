@@ -4,18 +4,21 @@
 
 .events-show{
     display: flex;
+    align-items: stretch;
     img {
         width: 50%;
-        height: 30%; }
+        height: auto; }
     .information{
         flex-direction: column;
-      text-align: center;
-
+        text-align: center;
 } 
 }
 
 .user_info{
+     display: flex;
+      flex-direction: column;
+        text-align: center;
     img {
-        width: 40%;
-        height: 40%; }
+        width: 30%;
+        height: auto; }
 }
