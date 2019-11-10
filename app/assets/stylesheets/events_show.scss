@@ -3,22 +3,50 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .events-show{
+    font-family: Quicksand, 游ゴシック体, "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
     display: flex;
     align-items: stretch;
     img {
         width: 50%;
-        height: auto; }
+        height: 100%; }
     .information{
         flex-direction: column;
         text-align: center;
+        line-height: 1;
+        width: 100vw;
+        height: 100vh;
 } 
+.information {
+    margin:  0;
+    background: #f1f1f1;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.22);
+}
+.information .event-title {
+    font-size: 1.2em;
+    background: #C2EEFF;
+    padding: 4px;
+    text-align: center;
+    color: #000;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+}
+.information p {
+    padding: 15px 20px;
+    margin: 0;
 }
 
+}
 .user_info{
-     display: flex;
-      flex-direction: column;
-        text-align: center;
+    font-family: Quicksand, 游ゴシック体, "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+    display: flex;
+    align-items: stretch;
+    line-height: 0.3;
+     
     img {
-        width: 30%;
-        height: auto; }
+    border-radius: 70%;
+    width: 140px;
+    height: 140px;
+     
+
+    }
 }

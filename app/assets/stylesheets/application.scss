@@ -10,6 +10,7 @@
 *=require_tree
 *= require_self
  * Correct `block` display not defined in IE 8/9. */
+
 body{
     margin: 0;
 }
@@ -17,21 +18,19 @@ body{
 /*header部分のcss*/
 h1 a{
     margin: 0;
-   font-family: 'Hiragino Kaku Gothic Pro','ヒラギノ角ゴ Pro W3','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
-
-      font-size: 30px;
-      color: #fff;
-      line-height: 50px;
+    font-family: 'Hiragino Kaku Gothic Pro','ヒラギノ角ゴ Pro W3','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
+    font-size: 30px;
+    color: #fff;
+    line-height: 50px;
 }
 
 header{
     align-items: center;
-    background: #2a7eb1;
+    background: #5fc2f5;
     box-shadow: 2px 2px 10px rgba(0,0,0,0.4);
     display: flex;
     height: 90px;
     padding-left: 20px;
-        
 }
 
 
