@@ -31,6 +31,9 @@ header{
     display: flex;
     height: 90px;
     padding-left: 20px;
+     postion: -webkit-sticky;
+        position: sticky;
+        top: 0;
 }
 
 
