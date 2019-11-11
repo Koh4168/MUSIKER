@@ -1,12 +1,11 @@
 <%= stylesheet_link_tag "users" %>
 
 <div class="user_info">
-    <div class="f-container-portfolio">
+    <div class="portfolio">
         <span><%= image_tag @user.image.url %></span>
         <h2><%= "#{@user.name}" %></h2>
     </div> 
-    <div class="f-container-userstext">
-        <%#<i class="fas fa-portrait fa-3x"></i>%>
+    <div class="userstext">
         <h3><%= "#{@user.text}" %> </h3>
         <h4><%= "#{@user.link}" %></h4>
     </div>
@@ -50,3 +49,4 @@
         </li>
      <% end %>
 
+    font-family: 'Hiragino Kaku Gothic Pro','ヒラギノ角ゴ Pro W3','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
