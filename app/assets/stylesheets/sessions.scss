@@ -26,7 +26,8 @@
 
 body {
   background: #fff;
-  font-family: 'Open Sans', sans-serif;
+   font-family: 'Hiragino Kaku Gothic Pro','ヒラギノ角ゴ Pro W3','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
+
 }
 
 .login {
@@ -48,11 +49,11 @@ body {
   margin-right: auto;
   margin-left: auto;
   border: 12px solid transparent;
-  border-bottom-color: #28d;
+  border-bottom-color: #5fc2f5;
 }
 
 .login-header {
-  background: #28d;
+  background: #5fc2f5;
   padding: 20px;
   font-size: 1.4em;
   font-weight: normal;
@@ -97,7 +98,7 @@ body {
 }
 
 .login input[type="submit"] {
-  background: #28d;
+  background: #5fc2f5;
   border-color: transparent;
   color: #fff;
   cursor: pointer;
