@@ -36,8 +36,8 @@ img {
     letter-spacing: 0.05em;
 }
 h3{
-       //margin: auto;
-     line-height: 150%;
+    margin: auto;
+    line-height: 150%;
     align-items: center;
      }
 h5{
@@ -120,7 +120,11 @@ h5{
   flex-wrap: wrap; }
 .user_events .events {
   position: relative;
-  z-index: 4; }
+  z-index: 4; 
+     margin:  1em;
+    background: #e3e7ed;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.22);
+}
   .user_events .events img {
     width: 250px;
     height: 200px; }
