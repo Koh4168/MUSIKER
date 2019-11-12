@@ -1,5 +1,5 @@
 <div class="events">
-         <span><%=image_tag event.image.url%></span>
+         <%=link_to (image_tag event.image.url),"/events/#{event.id}"%>
          <div class="event_name">
                   <%= event.name%>
          </div>
