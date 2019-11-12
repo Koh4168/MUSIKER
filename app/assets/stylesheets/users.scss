@@ -34,6 +34,7 @@ img {
     color: #000;
     font-weight: bold;
     letter-spacing: 0.05em;
+    margin: 10;
 }
 h3{
     margin: auto;
@@ -41,9 +42,11 @@ h3{
     align-items: center;
      }
 h5{
-     margin: auto;
-     line-height: 150%;
+    margin: auto;
+    line-height: 150%;
     align-items: center;
+      word-wrap: break-word;
+
 }
 }
 .user-events{
@@ -72,7 +75,6 @@ h5{
 }
 }
 }
-
 @charset "UTF-8";
 .user_info {
   font-family: 'Hiragino Kaku Gothic Pro','ヒラギノ角ゴ Pro W3','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
@@ -100,7 +102,7 @@ h5{
   margin: auto;
   line-height: 150%;
   align-items: center; }
-.user_text h4 {
+.user_text h5 {
   margin: auto;
   line-height: 150%;
   align-items: center; }
@@ -128,6 +130,7 @@ h5{
   .user_events .events img {
     width: 250px;
     height: 200px; }
+
 
 /*# sourceMappingURL=users.css.map */
 
