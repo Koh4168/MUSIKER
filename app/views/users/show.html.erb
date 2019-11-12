@@ -1,18 +1,20 @@
 <%= stylesheet_link_tag "users" %>
-
+ 
+     
 <div class="user_info">
-    <div class="portfolio">
-        <span><%= image_tag @user.image.url %></span>
-        <h2><%= "#{@user.name}" %></h2>
-    </div> 
-    <div class="userstext">
+    <span><%= image_tag @user.image.url %></span>
+    <div class='user_name'><h1><%= "#{@user.name}" %></h1></div>
+</div>
+<div class="user_text">
+    <div class="user_title"><P>Introduce</P></div>
         <h3><%= "#{@user.text}" %> </h3>
-        <h4><%= "#{@user.link}" %></h4>
-    </div>
+    <div class="user_title"><p>Link</p></div>
+        <h5><%= "#{@user.link}" %></h5>
 </div>
 
+    <div class="user-title"><p>イベント一覧</p></div>
+
 <div class="user_events">
-    <h2>イベント一覧</h2>
     <div class="f-container-eventindex">
         <% @events.each do |event| %>
           <div class="events">
@@ -49,4 +51,3 @@
         </li>
      <% end %>
 
-    font-family: 'Hiragino Kaku Gothic Pro','ヒラギノ角ゴ Pro W3','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
