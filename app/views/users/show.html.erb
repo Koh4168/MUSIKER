@@ -3,28 +3,32 @@
 <div class="mypage">
     <div class="user_info">
         <span><%= image_tag @user.image.url %></span>
-        <div class='user_name'><h1><%= "#{@user.name}" %></h1></div>
+        <div class='user_name'><h1><%= "#{@user.name}" %></h1>
+        </div>
     </div>
     <div class="user_text">
-        <div class="user_title"><P>Introduce</P></div>
+        <div class="user_title"><P>Introduce</P>
+        </div>
             <h3><%= "#{@user.text}" %> </h3>
-        <div class="user_title"><p>Link</p></div>
+        <div class="user_title"><p>Link</p>
+        </div>
             <h5><%= "#{@user.link}" %></h5>
     </div>
     
        
     <div class="user_events">
-        <div class="event-title"><p>イベント一覧</p></div>
+        <div class="event-title"><p>イベント一覧</p>
+        </div>
         <div class="f-container-eventindex">
             <% @events.each do |event| %>
-          <div class="events">
-            <span><%= image_tag event.image.url %></span>
-            <div class="name">
-                <%= event.name%> 
-            </div>
+        <div class="events">
+                       <%=link_to (image_tag event.image.url),"/events/#{event.id}"%>
+             <div class="name">
+               <%=link_to (event.name),"/events/#{event.id}"%>
+             </div>
             <div class="price-scedule">
-            <%= event.price%>
-            <%= event.scedule%>
+            <%=link_to (event.price),"/events/#{event.id}"%><br>
+            <%=link_to (event.scedule),"/events/#{event.id}"%>
             </div>
            <%#<% if user_signed_in?  
                 <li>
@@ -34,20 +38,30 @@
                     <= link_to '削除', "/events/#{event.id}",method: :delete >
                 </li>
             < end > %>
-            </div>
+        </div>
         <% end %>
     </div>
     <%= paginate(@events) %>
 </div>
+ <div class="user_zone"  >
      <% if user_signed_in?  %>
+     <div class="btn-square-shadow">
         <li>
             <%=link_to 'mypage編集',"/users/#{@user.id}/edit", method: :get %>
         </li>
+    </div>
+    <div class="btn-square-shadow">
         <li>
             <%=link_to 'メールアドレス　パスワード変更','/users/edit', method: :get %>
         </li>
+     </div>
+    <div class="btn-square-shadow">
         <li>
              <%= link_to 'イベント投稿', "/events/new",method: :get%>
         </li>
+     </div>
      <% end %>
+    
 </div>
+
+

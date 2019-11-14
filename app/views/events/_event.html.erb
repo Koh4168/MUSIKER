@@ -1,22 +1,21 @@
 <div class="events">
          <%=link_to (image_tag event.image.url),"/events/#{event.id}"%>
          <div class="event_name">
-                  <%= event.name%>
+                  <%=link_to (event.name),"/events/#{event.id}"%>
          </div>
          <div class="event_place">
-                  <%= event.place%>
+                  <%=link_to (event.place),"/events/#{event.id}"%>
          </div>
          <div class="event_scedule">
-                  <%= event.scedule%>
+                  <%=link_to (event.scedule),"/events/#{event.id}"%>
          </div>
   
      
      
      <div class="user_name">
-         <%= link_to "投稿者#{event.user.name}", user_path(event.user) %><br>
-         <%= link_to '詳細',"/events/#{event.id}" %>
+         <%= link_to "投稿者#{event.user.name}", user_path(event.user) %>
     </div>
-   </div>
+</div>
 
 
 

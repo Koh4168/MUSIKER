@@ -49,7 +49,7 @@ h5{
 
 }
 }
-.user-events{
+.user_events{
     .events-title{
     font-size: 1.2em;
     background: #C2EEFF;
@@ -81,6 +81,7 @@ h5{
   display: flex;
   flex-direction: row;
   z-index: 4;
+   word-wrap: break-word; 
   align-items: center; }
   .user_info img {
     border-radius: 50%;
@@ -118,7 +119,7 @@ h5{
 .user_events .f-container-eventindex {
   display: flex;
   flex-direction: row;
-  justify-content: space-arownd;
+  justify-content: space-between;
   flex-wrap: wrap; }
 .user_events .events {
   position: relative;
@@ -130,7 +131,29 @@ h5{
   .user_events .events img {
     width: 250px;
     height: 200px; }
-
+    
+.user_zone{
+  display: flex; 
+  flex-direction: row;
+  justify-content: space-around;
+  
+.btn-square-shadow {
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  background:  #5fc2f5;/*ボタン色*/
+  color: #FFF;
+  border-bottom: solid 4px #627295;
+  border-radius: 3px;
+}
+.btn-square-shadow:active {
+  /*ボタンを押したとき*/
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);/*下に動く*/
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);/*影を小さく*/
+  border-bottom: none;
+}
+}
 
 /*# sourceMappingURL=users.css.map */
 
