@@ -104,8 +104,8 @@ header .flexbox {
 }
 
 #search1{
- height: 50px;
-  width: 400px;
+ height: 8%;
+  width: 60%;
   margin: auto;
   position: absolute;
   top: 0;
@@ -117,13 +117,14 @@ background:#eee;
 }
 
 #sbtn{
-height: 57px;
-  width: 60px;
+height: 8%;
+  width: 10%;
   margin: auto;
   position: absolute;
-  top: 370px;
-  left: 467px;
+  top: 0;
+  left: 71%;
   right: 0;
+  bottom: 0;
     border-radius:0 2px 2px 0;/*角を丸める*/ 
     background:#7fbfff;/*背景カラー*/ 
     border:none;/*枠線を消す*/ 
