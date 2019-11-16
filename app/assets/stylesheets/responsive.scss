@@ -1,16 +1,16 @@
 // 変数の定義
 // min-width
 $breakpoint-up: (
-  'sm': 'screen and (min-width: 400px)',
-  'md': 'screen and (min-width: 768px)',
+  'sm': 'screen and (min-width: 421px)',
+  'md': 'screen and (min-width: 769px)',
   'lg': 'screen and (min-width: 1000px)',
   'xl': 'screen and (min-width: 1200px)',
 ) !default;
 
 // max-width
 $breakpoint-down: (
-  'sm': 'screen and (max-width: 399px)',
-  'md': 'screen and (max-width: 767px)',
+  'sm': 'screen and (max-width: 420px)',
+  'md': 'screen and (max-width: 768px)',
   'lg': 'screen and (max-width: 999px)',
   'xl': 'screen and (max-width: 1199px)',
 ) !default;
@@ -27,26 +27,15 @@ $breakpoint-down: (
     @content;
   }
 }
-
-//例
-//.box {
- // color: blue;
- // @include mq-up() { // 引数を省略（初期値はmdの768px）
- //   color: yellow;
- // }
-//  @include mq-up(lg) { // 引数を個別に指定
- //   color: red;
-//  }
-//}
-
+//example
 .inner{
   h1 a {
-    color: blue;
-    @include mq-up(){
-      color: yellow;
+    color: yellow;
+    @include mq-down(md){
+        color: blue;
     }
-    @include mq-up(lg){
-      color: red;
-    }
+    @include mq-down(sm){
+       color: red;
   }
+ }
 }
