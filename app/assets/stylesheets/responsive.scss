@@ -9,16 +9,21 @@
  
 /* 〜479px：SP縦
 ------------------------------ */
-ここに基本CSSを書きます。
-モバイルファーストでは、モバイル最小値からPCの大きさに向けて、以降のCSSを書いていきます。
- 
- 
-/* 480px〜599px：SP横
+
+/* 1280px〜：大型PC
 ------------------------------ */
-@media screen and (min-width:480px) and (max-width:599px) { 
+@media screen and (min-width:1280px) {
  
  
 }
+
+/* 960px〜1279px：小型PC
+------------------------------ */
+@media screen and (min-width:960px) and (max-width:1279px) {
+ 
+ 
+}
+ 
  
 /* 600px〜959px：タブレット
 ------------------------------ */
@@ -27,16 +32,17 @@
  
 }
  
-/* 960px〜1279px：小型PC
+ 
+/* 480px〜599px：SP横
 ------------------------------ */
-@media screen and (min-width:960px) and (max-width:1279px) {
- 
- 
+@media screen and (min-width:480px) and (max-width:599px) { 
+.evetns_show{
+    display: flex;
+img{
+    max-width: 100%;
 }
- 
-/* 1280px〜：大型PC
------------------------------- */
-@media screen and (min-width:1280px) {
- 
- 
+}
+
+    
+    
 }
