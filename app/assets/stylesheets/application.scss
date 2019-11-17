@@ -52,7 +52,7 @@ body{
     h1 a{
     margin: 0;
     font-family: 'Hiragino Kaku Gothic Pro','ヒラギノ角ゴ Pro W3','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
-    font-size: 60%;
+    font-size: 80%;
     color: #fff;
     line-height: 50px;
     @include mq-down(sm){
@@ -72,7 +72,6 @@ header{
     position: sticky;
     z-index: 5;
     top: 0;
-    
 }
 
 
@@ -94,8 +93,14 @@ header .flexbox {
     vertical-align: bottom;
 }
 
+.nav-global{
+  @include mq-down(sm){
+    display: none;
+  }
+}
+
 .nav-global ul {
-    list-style :none;
+    list-style: none;
 }
 
 .nav-global li {
@@ -165,14 +170,10 @@ height: 8%;
     background:#7fbfff;/*背景カラー*/ 
     border:none;/*枠線を消す*/ 
     color: #000000;
-    font-weight:bold;/*テキスト太字*/ 
-    font-size:16px;/*フォントサイズ*/ 
+    font-weight: bold;/*テキスト太字*/ 
+    font-size: 16px;/*フォントサイズ*/ 
 }
 
 #sbtn:hover{
 color:#666;/*マウスオーバーカラー*/ 
 }
-
-/*会員登録画面のcss*/
-
-/*login画面のcss*/
