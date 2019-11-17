@@ -41,6 +41,8 @@ $breakpoint-down: (
   }
 }
 
+
+
 body{
     margin: 0;
     background:#f0f2f5;
@@ -55,9 +57,7 @@ body{
     font-size: 80%;
     color: #fff;
     line-height: 50px;
-    @include mq-down(sm){
-        
-    }
+
 }
 
 header{
@@ -112,6 +112,111 @@ header .flexbox {
     text-decoration: none;
     font-family: 'Hiragino Kaku Gothic Pro','ヒラギノ角ゴ Pro W3','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
     width: 100%;
+}
+
+#drawer-checkbox {
+ display: none;
+
+}
+#drawer-icon {
+  display: none;
+  @include mq-down(sm){
+  cursor: pointer;
+  display: inline-block;
+  height: 30px;
+  position: relative;
+  width: 40px;
+  }
+}
+#drawer-icon span {
+  background:  #333;
+  border-radius: 4px;
+  display: block;
+  height: 16%;
+  left: 50%;
+  margin: -8% 0 0 -42%;
+  position: absolute;
+  top: 50%;
+  transition: all 0.3s ease-in-out;
+  width: 70%;
+}
+#drawer-icon span::before,
+#drawer-icon span::after {
+  -webkit-transform: rotate(0);
+  background: #333;
+  border-radius: 4px;
+  content: "";
+  display: block;
+  height: 100%;
+  left: 50%;
+  margin: -8% 0 0 -50%;
+  position: absolute;
+  top: 50%;
+  transform: rotate(0);
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+}
+#drawer-icon span::before {
+  margin-top: -38%;
+}
+#drawer-icon span::after {
+  margin-top: 19%;
+}
+#drawer-checkbox:checked ~ #drawer-icon span {
+  background: rgba(51, 51, 51, 0);
+}
+#drawer-checkbox:checked ~ #drawer-icon span::before,
+#drawer-checkbox:checked ~ #drawer-icon span::after {
+  content: "";
+  display: block;
+  height: 100%;
+  left: 50%;
+  margin: -8% 0 0 -42%;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+}
+#drawer-checkbox:checked ~ #drawer-icon span::before {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+#drawer-checkbox:checked ~ #drawer-icon span::after {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+#drawer-content {
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 40;
+  width: 250px;
+  max-width: 90%;
+  height: 100%;
+  background: #fff;
+  transition: all 0.3s ease-in-out 0s;
+  transform: translateX(-100%);
+}
+#drawer-checkbox:checked ~ #drawer-content {
+  transform: translateX(0);
+  box-shadow: 6px 0 25px rgba(0, 0, 0, 0.16);
+}
+
+#drawer-close {
+  display: none;
+  position: fixed;
+  z-index: 39;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 0;
+  transition: all 0.3s ease-in-out 0s;
+}
+#drawer-checkbox:checked ~ #drawer-close {
+  display: block;
+  opacity: 0.3;
 }
 
 
