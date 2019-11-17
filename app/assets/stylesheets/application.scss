@@ -11,6 +11,36 @@
 *= require_self
  * Correct `block` display not defined in IE 8/9. */
 
+// 変数の定義
+// min-width
+$breakpoint-up: (
+  'sm': 'screen and (min-width: 421px)',
+  'md': 'screen and (min-width: 769px)',
+  'lg': 'screen and (min-width: 1000px)',
+  'xl': 'screen and (min-width: 1200px)',
+) !default;
+
+// max-width
+$breakpoint-down: (
+  'sm': 'screen and (max-width: 420px)',
+  'md': 'screen and (max-width: 768px)',
+  'lg': 'screen and (max-width: 999px)',
+  'xl': 'screen and (max-width: 1199px)',
+) !default;
+
+// @mixinの定義
+@mixin mq-up($breakpoint: md) {
+  @media #{map-get($breakpoint-up, $breakpoint)} {
+    @content;
+  }
+}
+
+@mixin mq-down($breakpoint: md) {
+  @media #{map-get($breakpoint-down, $breakpoint)} {
+    @content;
+  }
+}
+
 body{
     margin: 0;
     background:#f0f2f5;
@@ -19,13 +49,15 @@ body{
 }
  
 /*header部分のcss*/
-h1 a{
+    h1 a{
     margin: 0;
     font-family: 'Hiragino Kaku Gothic Pro','ヒラギノ角ゴ Pro W3','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
-    font-size: 30px;
+    font-size: 60%;
     color: #fff;
     line-height: 50px;
-  
+    @include mq-down(sm){
+        
+    }
 }
 
 header{

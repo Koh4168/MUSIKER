@@ -28,7 +28,7 @@ $breakpoint-down: (
   }
 }
 //example
-.inner{
+/*.inner{
   h1 a {
     color: yellow;
     @include mq-down(md){
@@ -38,4 +38,4 @@ $breakpoint-down: (
        color: red;
   }
  }
-}
+}*/
