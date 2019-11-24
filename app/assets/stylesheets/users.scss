@@ -20,7 +20,12 @@ img {
     float:　left;
 }
 .user_name{
-        margin: 0 auto;
+    margin: 0 auto;
+    font-family: 'Lato', 'Noto Sans JP', '游ゴシック Medium', '游ゴシック体', 'Yu Gothic Medium', YuGothic, 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+    color: #555555	;
+    text-decoration: none;
+    width: 100%;
+    font-size: 100%;
 }
 }
 
@@ -36,12 +41,29 @@ img {
     letter-spacing: 0.05em;
     margin: 10;
 }
+p{
+  font-family: 'Lato', 'Noto Sans JP', '游ゴシック Medium', '游ゴシック体', 'Yu Gothic Medium', YuGothic, 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+    color: #555555	;
+    text-decoration: none;
+    width: 100%;
+    font-size: 100%;
+}
 h3{
+   font-family: 'Lato', 'Noto Sans JP', '游ゴシック Medium', '游ゴシック体', 'Yu Gothic Medium', YuGothic, 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+    color: #555555	;
+    text-decoration: none;
+    width: 100%;
+    font-size: 100%;
     margin: auto;
     line-height: 150%;
     align-items: center;
      }
 h5{
+  font-family: 'Lato', 'Noto Sans JP', '游ゴシック Medium', '游ゴシック体', 'Yu Gothic Medium', YuGothic, 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+    color: #555555	;
+    text-decoration: none;
+    width: 100%;
+    font-size: 100%;
     margin: auto;
     line-height: 150%;
     align-items: center;
@@ -58,6 +80,13 @@ h5{
     color: #000;
     font-weight: bold;
     letter-spacing: 0.05em;
+}
+p{
+  font-family: 'Lato', 'Noto Sans JP', '游ゴシック Medium', '游ゴシック体', 'Yu Gothic Medium', YuGothic, 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+    color: #555555	;
+    text-decoration: none;
+    width: 100%;
+    font-size: 100%;
 }
 .f-container-eventindex{
     display: flex;
