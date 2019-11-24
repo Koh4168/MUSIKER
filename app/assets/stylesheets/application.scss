@@ -208,9 +208,10 @@ header .flexbox {
 }
 li{
    list-style: none;
-     letter-spacing: 0.1em
+  letter-spacing: 0.1em
 }
 }
+
 #drawer-checkbox:checked ~ #drawer-content {
   transform: translateX(0);
   box-shadow: 6px 0 25px rgba(0, 0, 0, 0.16);

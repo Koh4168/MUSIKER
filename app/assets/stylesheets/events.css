@@ -1,0 +1,22 @@
+.events-index {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 1em; }
+  .events-index .events {
+    margin: 1em;
+    background: #e3e7ed;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.22); }
+  .events-index .events img {
+    width: 250px;
+    height: 200px; }
+  .event_name{
+    font-family: 'Lato', 'Noto Sans JP', '游ゴシック Medium', '游ゴシック体', 'Yu Gothic Medium', YuGothic, 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+    color: #000;
+    text-decoration: none;
+    width: 100%;
+    font-size: 100%;
+  }
+
+/*# sourceMappingURL=events.css.map */
