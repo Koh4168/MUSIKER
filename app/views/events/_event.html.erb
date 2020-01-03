@@ -9,6 +9,7 @@
          <div class="event_scedule">
                   <%=link_to (event.scedule),"/events/#{event.id}",{class: "event_name"}%>
          </div>
+       
   
      <div class="user_name">
          <%= link_to "投稿者#{event.user.name}", user_path(event.user) ,{class: "event_name"}%>

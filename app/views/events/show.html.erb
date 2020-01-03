@@ -24,12 +24,17 @@
             
         </div>
 </div>
-   
+<div class="user_zone"  >
    <% if user_signed_in? && current_user.id == @event.user_id %>
+    <div class="btn-square-shadow">
         <li>
             <%=link_to '編集', "/events/#{@event.id}/edit", method: :get %>
         </li>
+    </div>
+    <div class="btn-square-shadow">
         <li>
             <%= link_to '削除', "/events/#{@event.id}",method: :delete %>
         </li>
+    </div>
     <% end %>
+</div>

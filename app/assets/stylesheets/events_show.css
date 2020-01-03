@@ -1,0 +1,63 @@
+@charset "UTF-8";
+.events-show {
+  font-family: 'Lato', 'Noto Sans JP', '游ゴシック Medium', '游ゴシック体', 'Yu Gothic Medium', YuGothic, 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+  display: flex;
+  align-items: stretch; }
+  .events-show img {
+    width: 40%;
+    height: 100%;
+    postion: -webkit-sticky;
+    position: sticky;
+    z-index: 4;
+    top: 11.2%; }
+  .events-show .information {
+    flex-direction: column;
+    text-align: center;
+    line-height: 1;
+    width: 100vw;
+    height: 100vh; }
+  .events-show .information {
+    background: #f1f1f1;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.22); }
+  .events-show .information .event-title {
+    font-size: 1.2em;
+    background: #C2EEFF;
+    padding: 4px;
+    text-align: center;
+    color: #000;
+    font-weight: bold;
+    letter-spacing: 0.05em; }
+  .events-show .information p {
+    padding: 15px 20px;
+    margin: 0; }
+
+.user_info {
+  font-family: Quicksand, 游ゴシック体, "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  display: flex;
+  align-items: stretch;
+  line-height: 0.3; }
+  .user_info img {
+    border-radius: 70%;
+    width: 140px;
+    height: 140px; }
+
+.btn-square-shadow {
+  display: inline-block;
+  padding: 0.5em 1em;
+  background: #C2EEFF;
+  /*ボタン色*/
+  color: #FFF;
+  border-bottom: solid 4px #627295;
+  border-radius: 3px;
+  list-style: none; }
+
+.btn-square-shadow:active {
+  /*ボタンを押したとき*/
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);
+  /*下に動く*/
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+  /*影を小さく*/
+  border-bottom: none; }
+
+/*# sourceMappingURL=events_show.css.map */

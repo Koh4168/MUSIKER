@@ -161,19 +161,33 @@ p{
     width: 250px;
     height: 200px; }
     
+/*# ユーザー編集ボタンcss*/
 .user_zone{
   display: flex; 
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center; /*均等間隔*/
+   font-family: 'Lato', 'Noto Sans JP', '游ゴシック Medium', '游ゴシック体', 'Yu Gothic Medium', YuGothic, 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+    color: #808080	;
+    width: 100%;
+    font-size: 100%;
+    list-style: none;
+    
+    a{
+    font-family: 'Lato', 'Noto Sans JP', '游ゴシック Medium', '游ゴシック体', 'Yu Gothic Medium', YuGothic, 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+    color:#808080;
+    text-decoration: none;
+    width: 100%;
+    font-size: 100%;
+      }
   
 .btn-square-shadow {
   display: inline-block;
   padding: 0.5em 1em;
-  text-decoration: none;
-  background:  #5fc2f5;/*ボタン色*/
+  background:  #C2EEFF;/*ボタン色*/
   color: #FFF;
   border-bottom: solid 4px #627295;
   border-radius: 3px;
+  
 }
 .btn-square-shadow:active {
   /*ボタンを押したとき*/
@@ -186,4 +200,10 @@ p{
 
 /*# sourceMappingURL=users.css.map */
 
-
+p{
+  font-family: 'Lato', 'Noto Sans JP', '游ゴシック Medium', '游ゴシック体', 'Yu Gothic Medium', YuGothic, 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+    color: #555555	;
+    text-decoration: none;
+    width: 100%;
+    font-size: 100%;
+}
