@@ -1,40 +1,44 @@
-<div class="events-show" >
-    <%= image_tag @event.image.url %>
-    <div class="information">
-        <div class="event-title"><p>イベント名</p></div>
-            <h1><%= @event.name%></h1>
-        <div class="event-title"><p>place</p></div>
-             <h3><%= @event.place%></h3>
-        <div class="event-title"><p>price</p></div>
-            <h3><%= @event.price%></h3>
-        <div class="event-title"><p>scedule</p></div>
-            <h3><%= @event.scedule%></h3>
-        <div class="event-title"><p>イベント詳細</p></div>
-            <h4><%= @event.text %></h4>
-        <div class="event-title"><p>イベントリンク</p></div>
-            <h3><%= @event.link %></h3>
+<div class="f-container">
+    <div class="events-show" >
+        <%= image_tag @event.image.url %>
+        <div class="information">
+            <div class="event-title"><p>イベント名</p></div>
+                <h1><%= @event.name%></h1>
+            <div class="event-title"><p>place</p></div>
+                 <h3><%= @event.place%></h3>
+            <div class="event-title"><p>price</p></div>
+                <h3><%= @event.price%></h3>
+            <div class="event-title"><p>scedule</p></div>
+                <h3><%= @event.scedule%></h3>
+            <div class="event-title"><p>イベント詳細</p></div>
+                <h3><%= @event.text %></h3>
+            <div class="event-title"><p>イベントリンク</p></div>
+                <h3><%= @event.link %></h3>
+        </div>
+    </div>
+
+
+    <h3>投稿者</h3>　  
+    <div class="user_info">
+                <%= image_tag @user.image.url %>
+            <div class='user_text'>
+                <h2><%= "#{@user.name}" %></h2>
+                
+            </div>
+    </div>
+    <div class="user_zone"  >
+       <% if user_signed_in? && current_user.id == @event.user_id %>
+        <div class="btn-square-shadow">
+            <li>
+                <%=link_to '編集', "/events/#{@event.id}/edit", method: :get %>
+            </li>
+        </div>
+        <div class="btn-square-shadow">
+            <li>
+                <%= link_to '削除', "/events/#{@event.id}",method: :delete %>
+            </li>
+        </div>
+        <% end %>
     </div>
 </div>
 
-<h3>投稿者</h3>　  
-<div class="user_info">
-            <%= image_tag @user.image.url %>
-        <div class='user_text'>
-            <h2><%= "#{@user.name}" %></h2>
-            
-        </div>
-</div>
-<div class="user_zone"  >
-   <% if user_signed_in? && current_user.id == @event.user_id %>
-    <div class="btn-square-shadow">
-        <li>
-            <%=link_to '編集', "/events/#{@event.id}/edit", method: :get %>
-        </li>
-    </div>
-    <div class="btn-square-shadow">
-        <li>
-            <%= link_to '削除', "/events/#{@event.id}",method: :delete %>
-        </li>
-    </div>
-    <% end %>
-</div>
