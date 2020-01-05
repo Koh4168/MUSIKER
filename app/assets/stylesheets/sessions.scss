@@ -117,6 +117,8 @@ body {
 
 
 .checkbox{
+  font-family: "Open sans", "Segoe UI", "Segoe WP", Helvetica, Arial, sans-serif;
+  color: #777;
 /* Base for label styling */
 #user_remember_me{
   display:none;
@@ -189,10 +191,5 @@ body {
 /* hover style just for information */
 label:hover:before {
   border: 2px solid #4778d9!important;
-}
-/* Useless styles, just for demo design */
-body {
-  font-family: "Open sans", "Segoe UI", "Segoe WP", Helvetica, Arial, sans-serif;
-  color: #777;
 }
 }
