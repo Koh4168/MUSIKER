@@ -1,19 +1,20 @@
-<div class="new">
+<div class="password">
+  <div class="password-triangle"></div>
+    <h2 class="password-header">パスワードを忘れましたか？</h2>
+
+  <div class='password-container'>
+    <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+    <%= render "devise/shared/error_messages", resource: resource %>
   
-<a>パスワードを忘れましたか?</a>
-
-<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Send me reset password instructions" %>
-  </div>
-<% end %>
+    <div class="field">
+      <p><%= f.email_field :email, autofocus: true,placeholder: 'メールアドレス', class: 'input form-control', autocomplete: "email" %></p>
+    </div>
+  
+    <div class="actions">
+      <%= f.submit "再設定用URLを送信" %>
+    </div>
+  <% end %>
+</div>
 
 <%= render "devise/shared/links" %>
 
