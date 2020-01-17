@@ -60,12 +60,15 @@ body {
 
 .events-post-container {
   background: #ebebeb;
-  padding: 12px;
+  padding: 10px;
 
 
 /* Every row inside .login-container is defined with p tags */
 p {
-  padding: 12px;
+  padding: 5px;
+  font-family: 'Lato', 'Noto Sans JP', '游ゴシック Medium', '游ゴシック体', 'Yu Gothic Medium', YuGothic, 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+  color:#808080;
+
 }
 
 input {

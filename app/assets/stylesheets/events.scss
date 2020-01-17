@@ -2,23 +2,50 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+// 変数の定義
+// min-width
+$breakpoint-up: (
+  'sm': 'screen and (min-width: 421px)',
+  'md': 'screen and (min-width: 769px)',
+  'lg': 'screen and (min-width: 1000px)',
+  'xl': 'screen and (min-width: 1200px)',
+) !default;
+
+// max-width
+$breakpoint-down: (
+  'sm': 'screen and (max-width: 420px)',
+  'md': 'screen and (max-width: 768px)',
+  'lg': 'screen and (max-width: 999px)',
+  'xl': 'screen and (max-width: 1199px)',
+) !default;
+
+// @mixinの定義
+@mixin mq-up($breakpoint: md) {
+  @media #{map-get($breakpoint-up, $breakpoint)} {
+    @content;
+  }
+}
+
+@mixin mq-down($breakpoint: md) {
+  @media #{map-get($breakpoint-down, $breakpoint)} {
+    @content;
+  }
+}
+
 
 .events-index{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content:center;
     flex-wrap: wrap; 
-    margin: 1em;
 }   
-    .events{
-    margin:  1em;
+.events{
     background: #e3e7ed;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.22);
+  }
     
-    .events img {
+.events img {
     width: 250px;
     height: 200px; 
     }
-     
-    
-}
+
