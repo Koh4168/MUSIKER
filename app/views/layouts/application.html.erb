@@ -10,7 +10,6 @@
     <%= stylesheet_link_tag "users" %>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-    <!-- コード追加　Font Awesome読み込みコード-->
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Noto+Sans+JP:400,700" rel="stylesheet">
      <!-- コード追加　Bootstrap CSS読み込みコード-->
@@ -28,13 +27,18 @@
           <h1 class="logo-img">
             <a href="/">Musiker</a>
           </h1>
+          
+          
           <%= form_tag events_path, :method => 'get' do %>
-            <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-            <div  class="search_container">
-              <input type="text" size="25" placeholder="　キーワード検索">
+            <div class="header_search">
+              <a><%= text_field_tag :search1, params[:search],placeholder: "キーワード入力"%></a>
               <input type="submit" value="&#xf002">
+              <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
             </div>
           <% end %>
+         
+         
+         
           <%# ドロワーhtml%>
         <div class='drawer'>
           <input id="drawer-checkbox" type="checkbox">

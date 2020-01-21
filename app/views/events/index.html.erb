@@ -2,6 +2,7 @@
     <% @events.each do |event| %>
        <%= render partial: "event", locals: {event: event} %>　
     <% end %>
+    
     <%= paginate(@events) %>
      
    
