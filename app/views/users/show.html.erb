@@ -4,12 +4,15 @@
     <div class="user_info">
         <span><%= image_tag @user.image.url %></span>
         <div class='user_name'><h1><%= "#{@user.name}" %></h1></div>
+        <a href="#{@user.link}" class="insta_btn">
+              <span class="insta">
+                <i class="fab fa-instagram"></i>
+            </span>
+        </a>
     </div>
     <div class="user_text">
         <div class="user_title"><P>Introduce</P></div>
             <h3><%= "#{@user.text}" %> </h3>
-        <div class="user_title"><p>Link</p></div>
-            <h5><%= "#{@user.link}" %></h5>
     </div>
 
     <div class="user_events">
@@ -48,7 +51,7 @@
         </li>
      </div>
      <% end %>
-    
+     
 </div>
 
 
