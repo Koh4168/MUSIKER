@@ -27,50 +27,82 @@ img {
     width: 80%;
     font-size: 100%;
 }
-.insta_btn {
+}
+$fbBlue: #3b5998;
+$ytRed: #b00;
+$twBlue: #55acee;
+$igBlue: #125688;
+$ghBlack: #000;
+$cpBlack: #000;
+$scOrange: #f50;
+
+* {
+  box-sizing: border-box;
+}
+
+
+#social-container {
+  width: 100%;
+  background: rgba(255,255,255,0.1); //背景色
+  padding: 10px;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+  //margin-top: 25vh; 高さ指定
+}
+
+.social-button {
+  color: white;
   display: inline-block;
-  text-align: center;/*中央揃え*/
-  color: #2e6ca5;/*文字色*/
-  font-size: 20px;/*文字サイズ*/
-  text-decoration: none;/*下線消す*/
+  padding: 5px;
+  vertical-align: middle;
+  text-align: center;
+  min-width: 38px;
+  width: 38px;
+  height: 38px;
+  position: relative;
+  line-height: 28px;
+  overflow: hidden;
+  white-space: nowrap;
+
+  transition: width 300ms ease;
+  -webkit-transition: width 300ms ease;
+
+  i {
+    vertical-align: middle;
+    position: relative;
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+  }
+
+  span {
+    display: inline-block;
+    font-family: Geneva, Helvetica, sans-serif;
+    font-size: 16px;
+    vertical-align: middle;
+    position: relative;
+    margin-left: 5px;
+    margin-right: 5px;
+
+    transition: width 300ms ease;
+  }
+
+  &.fb {
+    background: $fbBlue;
+  }
+  &.yt {
+    background: $ytRed;
+  }
+  &.tw {
+    background: $twBlue;
+  }
+  &.ig {
+    background: $igBlue;
+  }
 }
 
-.insta_btn:hover {/*ホバー時*/
-  color:#668ad8;/*文字色*/
-  transition: .5s;/*ゆっくり変化*/
-}
 
-.insta_btn .insta{/*アイコンの背景*/
-  position: relative;/*相対配置*/
-  display: inline-block;
-  width: 50px;/*幅*/
-  height: 50px;/*高さ*/
-  background: -webkit-linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
-  background: linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;/*グラデーション①*/
-  overflow: hidden;/*はみ出た部分を隠す*/
-  border-radius: 13px;/*角丸に*/
-
-}
-
-.insta_btn .insta:before{/*グラデーションを重ねるため*/
-  content: '';
-  position: absolute;/*絶対配置*/
-  top: 23px;/*ずらす*/
-  left: -18px;/*ずらす*/
-  width: 60px;/*グラデーションカバーの幅*/
-  height: 60px;/*グラデーションカバーの高さ*/
-  background: -webkit-radial-gradient(#ffdb2c 10%, rgba(255, 105, 34, 0.65) 55%, rgba(255, 88, 96, 0) 70%);
-  background: radial-gradient(#ffdb2c 10%, rgba(255, 105, 34, 0.65) 55%, rgba(255, 88, 96, 0) 70%);/*グラデーション②*/
-}
-
-.insta_btn .fa-instagram {/*アイコン*/
-  color: #FFF;/*白に*/
-  position: relative;/*z-indexを使うため*/
-  z-index: 2;/*グラデーションより前に*/
-  font-size: 35px;/*アイコンサイズ*/
-  line-height: 50px;/*高さと合わせる*/
-} 
-}
 
 
 .user_text{
@@ -242,86 +274,4 @@ p{
     text-decoration: none;
     width: 100%;
     font-size: 100%;
-}
-$fbBlue: #3b5998;
-$ytRed: #b00;
-$twBlue: #55acee;
-$igBlue: #125688;
-$ghBlack: #000;
-$cpBlack: #000;
-$scOrange: #f50;
-
-* {
-  box-sizing: border-box;
-}
-
-
-#social-container {
-  width: 410px;
-  background: rgba(255,255,255,0.1);
-  padding: 20px;
-  text-align: center;
-  margin: 0 auto;
-  display: block;
-  margin-top: 25vh;
-}
-
-.social-button {
-  color: white;
-  display: inline-block;
-  padding: 5px;
-  vertical-align: middle;
-  text-align: center;
-  min-width: 38px;
-  width: 38px;
-  height: 38px;
-  position: relative;
-  line-height: 28px;
-  overflow: hidden;
-  white-space: nowrap;
-
-  transition: width 300ms ease;
-  -webkit-transition: width 300ms ease;
-
-  i {
-    vertical-align: middle;
-    position: relative;
-    width: 28px;
-    height: 28px;
-    line-height: 28px;
-  }
-
-  span {
-    display: inline-block;
-    font-family: Geneva, Helvetica, sans-serif;
-    font-size: 16px;
-    vertical-align: middle;
-    position: relative;
-    margin-left: 5px;
-    margin-right: 5px;
-
-    transition: width 300ms ease;
-  }
-
-  &.fb {
-    background: $fbBlue;
-  }
-  &.yt {
-    background: $ytRed;
-  }
-  &.tw {
-    background: $twBlue;
-  }
-  &.sc {
-    background: $scOrange;
-  }
-  &.ig {
-    background: $igBlue;
-  }
-  &.cp {
-    background: $cpBlack;
-  }
-  &.gh {
-    background: $ghBlack;
-  }
 }
