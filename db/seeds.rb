@@ -1,4 +1,5 @@
 User.create( name: 'Mako',email:'tech-camp@gmail.com', password: '12345678')
+User.create(text: 'tech-camp@gmail.com', name: 'Mako')
 
 #require "csv"
 
