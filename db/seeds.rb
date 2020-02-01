@@ -4,8 +4,8 @@ User.create(text: 'tech-camp@gmail.com', name: 'Mako')
 require "csv"
 
 users= [
-{ username: 'kanritarou', email: 'kanri1@yahoo.com', password: 'test1' },
-{ username: 'kanrijirou', email: 'kanri2@yahoo.com', password: 'test2' },
+{ name: 'kanritarou', email: 'kanri1@yahoo.com', password: 'test1' },
+{ name: 'kanrijirou', email: 'kanri2@yahoo.com', password: 'test2' },
 ]
 users.each do |record|
  User.create!(record) unless User.find_by(email: record[:email])
