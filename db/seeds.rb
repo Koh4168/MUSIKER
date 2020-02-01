@@ -1,4 +1,5 @@
 Event.create(text: 'tech-camp@gmail.com', name: 'Mako')
+User.create(text: 'tech-camp@gmail.com', name: 'Mako')
 
 #require "csv"
 
