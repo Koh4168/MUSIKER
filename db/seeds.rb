@@ -1,15 +1,10 @@
-Event.create(text: 'tech-camp@gmail.com', name: 'Mako')
-User.create(text: 'tech-camp@gmail.com', name: 'Mako')
+#Event.create(text: 'tech-camp@gmail.com', name: 'Mako')
+#User.create(text: 'tech-camp@gmail.com', name: 'Mako')
 
-require "csv"
+#require "csv"
 
-users= [
-{ name: 'kanritarou', email: 'kanri1@yahoo.com', password: 'test1' },
-{ name: 'kanrijirou', email: 'kanri2@yahoo.com', password: 'test2' },
-]
-users.each do |record|
- User.create!(record) unless User.find_by(email: record[:email])
-end
+#user = User.new(:email => 'hogehoge@hoge.com', :password => 'hugahuga')
+#user.save!
 
 #users_csv = CSV.readlines("db/users.csv")
 #users_csv.each do |row|
