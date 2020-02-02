@@ -82,3 +82,5 @@ gem 'devise-i18n-views'
 group :production do
   gem 'rails_12factor'
 end
+
+gem 'rails_12factor', group: :production
