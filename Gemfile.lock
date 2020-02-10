@@ -119,6 +119,7 @@ GEM
     erubi (1.9.0)
     execjs (2.7.0)
     ffi (1.12.2)
+    flex-slider-rails (2.7.0)
     font-awesome-rails (4.7.0.5)
       railties (>= 3.2, < 6.1)
     globalid (0.4.2)
@@ -192,7 +193,7 @@ GEM
       pry (>= 0.10.4)
     public_suffix (4.0.3)
     puma (3.12.2)
-    rack (2.1.2)
+    rack (2.2.0)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
     rails (5.2.4.1)
@@ -310,6 +311,7 @@ DEPENDENCIES
   devise
   devise-i18n
   devise-i18n-views
+  flex-slider-rails
   font-awesome-rails
   hirb
   hirb-unicode

@@ -78,6 +78,8 @@ gem 'carrierwave'
 gem 'rails-i18n'
 gem 'devise-i18n'
 gem 'devise-i18n-views'
+gem 'flex-slider-rails'
+
 
 group :production do
   gem 'rails_12factor'
