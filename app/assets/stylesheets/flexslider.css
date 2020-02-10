@@ -104,11 +104,13 @@ html[xmlns] .flexslider .slides {
 .loading .flex-viewport {
   max-height: 300px;
 }
+/*unknownとでため、コメントアウト
 @-moz-document url-prefix() {
   .loading .flex-viewport {
     max-height: none;
   }
 }
+*/
 .carousel li {
   margin-right: 5px;
 }
@@ -150,15 +152,39 @@ html[xmlns] .flexslider .slides {
 }
 .flex-direction-nav .flex-prev {
   left: -50px;
+   display: block;
+    top: 30px;
+     width: 30px;
+     height: 30px;
+     border-top: solid 3px #697b91;
+     border-right: solid 3px #697b91;
+     -webkit-transform: rotate(220deg);
+     transform: rotate(225deg);
+
 }
 .flex-direction-nav .flex-next {
   right: -50px;
   text-align: right;
+   display: block;
+    top: 30px;
+     width: 30px;
+     height: 30px;
+     border-top: solid 3px #697b91;
+     border-right: solid 3px #697b91;
+     -webkit-transform: rotate(45deg);
+     transform: rotate(45deg);
 }
 .flexslider:hover .flex-direction-nav .flex-prev {
   opacity: 0.7;
   left: 10px;
-  background: url(images/arrow.png) no-repeat;
+   display: block;
+    top: 30px;
+     width:30px;
+     height: 30px;
+     border-top: solid 3px #697b91;
+     border-right: solid 3px #697b91;
+     -webkit-transform: rotate(220deg);
+     transform: rotate(225deg);
 }
 .flexslider:hover .flex-direction-nav .flex-prev:hover {
   opacity: 1;
@@ -166,8 +192,15 @@ html[xmlns] .flexslider .slides {
 .flexslider:hover .flex-direction-nav .flex-next {
   opacity: 0.7;
   right: 10px;
-  background: url(images/arrow.png) no-repeat left;
-  
+   display: block;
+    top: 30px;
+     width: 30px;
+     height: 30px;
+     border-top: solid 3px #697b91;
+     border-right: solid 3px #697b91;
+     -webkit-transform: rotate(45deg);
+     transform: rotate(45deg);
+
 }
 .flexslider:hover .flex-direction-nav .flex-next:hover {
   opacity: 1;
@@ -195,7 +228,7 @@ html[xmlns] .flexslider .slides {
   font-family: "flexslider-icon";
   font-size: 20px;
   display: inline-block;
-   content: '';
+  content: '';
 }
 .flex-pauseplay a:hover {
   opacity: 1;
@@ -279,29 +312,25 @@ html[xmlns] .flexslider .slides {
   .flex-direction-nav .flex-prev {
     opacity: 1;
     left: 10px;
+    display: block;
+    top: 30px;
+     width: 15px;
+     height: 15px;
+     border-top: solid 3px #697b91;
+     border-right: solid 3px #697b91;
+     -webkit-transform: rotate(220deg);
+     transform: rotate(225deg);
   }
   .flex-direction-nav .flex-next {
     opacity: 1;
     right: 10px;
+    display: block;
+    top: 30px;
+     width: 15px;
+     height: 15px;
+     border-top: solid 3px #697b91;
+     border-right: solid 3px #697b91;
+     -webkit-transform: rotate(45deg);
+     transform: rotate(45deg);
   }
-}
-
-
-.arrow01 {
-     display: block;
-     width: 15px;
-     height: 15px;
-     border-top: solid 3px #697b91;
-     border-right: solid 3px #697b91;
-     -webkit-transform: rotate(45deg);
-     transform: rotate(45deg);
-}
-.arrow02 {
-     display: block;
-     width: 15px;
-     height: 15px;
-     border-top: solid 3px #697b91;
-     border-right: solid 3px #697b91;
-     -webkit-transform: rotate(45deg);
-     transform: rotate(45deg);
 }
