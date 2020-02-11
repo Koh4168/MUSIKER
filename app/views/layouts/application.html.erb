@@ -31,8 +31,45 @@ $(window).load(function() {
     sync: "#carousel"
   });
 });
+
+(function() {
+ 
+  // store the slider in a local variable
+  var $window = $(window),
+      flexslider = { vars:{} };
+ 
+  // tiny helper function to add breakpoints
+  function getGridSize() {
+    return (window.innerWidth < 600) ? 2 :
+           (window.innerWidth < 900) ? 3 : 4;
+  }
+ 
+  $(function() {
+    SyntaxHighlighter.all();
+  });
+ 
+  $window.load(function() {
+    $('.flexslider').flexslider({
+      animation: "slide",
+      animationLoop: false,
+      itemWidth: 210,
+      itemMargin: 5,
+      minItems: getGridSize(), // use function to pull in initial value
+      maxItems: getGridSize() // use function to pull in initial value
+    });
+  });
+ 
+  // check grid size on resize event
+  $window.resize(function() {
+    var gridSize = getGridSize();
+ 
+    flexslider.vars.minItems = gridSize;
+    flexslider.vars.maxItems = gridSize;
+  });
+}());
 </script>
 
+    <script src="http://web-pixy.com/js/jquery.flexslider-min.js"></script>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track'=> true %>
     <%= stylesheet_link_tag "users" %>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -42,6 +79,7 @@ $(window).load(function() {
      <!-- コード追加　Bootstrap CSS読み込みコード-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <!-- コード追加　Bootstrap JavaScript読み込みコード-->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </head>
