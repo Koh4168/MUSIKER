@@ -13,9 +13,13 @@
         <input id="sbtn" type="submit" value="検索" /></td>
         </form>%>
       </section>
-      
+    <%#イベントのピックアップ%>  
       <section class="pickup">
-     <!-- Place somewhere in the <body> of your page -->
+         <div class='pickup_font'>
+             <h2 class='pp_font'>Pick up Event</h2>
+             <div class='pickup_information'>開催間近、人気のコンサートです
+             </div>
+         </div>
           <div class="flexslider carousel">
             <ul class="slides">
                <% @events.each do |event| %>
@@ -23,14 +27,31 @@
                  <%=link_to (image_tag event.image.url),"/events/#{event.id}"%>
               </li>
                <% end %>
-              <!-- items mirrored twice, total of 12 -->
             </ul>
           </div>
-
+     
+     <%# userのピックアップ%>     
+        <div class='pickup_font'>
+            <h2 class='pp_font'>Pick up Artist</h2>
+                <div class='pickup_information'>今、人気のアーティスト
+                </div>
+            <div class="flexslider carousel">
+                <ul class="slides">
+                     <% @user.each do |user| %>
+                        <div class="user_info">
+                          <li>>   
+                            <%=link_to (image_tag user.image.url),"/users/#{user.id}" %>
+                          </li>
+                        </div>
+                     <% end %>
+                </ul>
+          </div>
+          
+         </div>
       </section>
 
       <section class="comming">
-  
+
       </section>
     </main>
     

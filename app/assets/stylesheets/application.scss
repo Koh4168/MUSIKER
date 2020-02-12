@@ -276,7 +276,26 @@ input[type="submit"]{
 .pickup {
      height: 100vh;
      background-color: #ffffff;
-
+.pickup_font{
+  color: rgb(34, 34, 34) !important;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif !important;
+    font-weight: 400 !important;
+    margin-bottom: 16px !important;
+}
+.pp_font{
+  font-size: 22px !important;
+    font-weight: 600 !important;
+    line-height: 26px !important;
+    letter-spacing: -0.6px !important;
+    color: inherit !important;
+    margin: 0px !important;
+    padding: 0px !important;
+}
+.pickup_information{
+  font-size: 16px !important;
+    line-height: 24px !important;
+    padding-top: 8px !important;
+}
 }
 
 
