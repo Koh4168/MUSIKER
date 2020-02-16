@@ -321,6 +321,7 @@ html[xmlns] .flexslider .slides {
      border-right: solid 3px #697b91;
      -webkit-transform: rotate(220deg);
      transform: rotate(225deg);
+     z-index: 4;
   }
   .flex-direction-nav .flex-next {
     opacity: 1;
@@ -333,5 +334,7 @@ html[xmlns] .flexslider .slides {
      border-right: solid 3px #697b91;
      -webkit-transform: rotate(45deg);
      transform: rotate(45deg);
+          z-index: 4;
+
   }
 }
